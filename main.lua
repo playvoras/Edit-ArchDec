@@ -1,1 +1,1870 @@
- local _aro = (tpnhbkgqedl_() local sfjitpnhb = sfjitpnhb local dl_ar = dl_ar local edl = edl local qed = qed local gqedl = gqedl local kgqedl = kgqedl local qedl_aroms_format = qedl_aroms.format local hbkgq = gqedl_a.move local nhbkg = gqedl_a.pack local gqedl_a_unpack = gqedl_a.unpack local tpnhb = gqedl_a.create local kgqedl_arom = gqedl_a.insert local jitpnh = gqedl_a.remove local fjitpn = coroutine.create local sfj = coroutine.yield local msf = coroutine.resume local omsfj = coroutine.close local romsf = buffer.fromstring local buffer_kgqedl_aromsf = buffer.len local _arom = buffer.readu8 local l_aroms = buffer.readu32 local dl_aro = buffer.readstring local edl_ = buffer.readf32 local qedl_ = buffer.readf64 local gqedl_ = bit32.bor local kgqedl_ = bit32.band local bkgqe = bit32.btest local hbkgqe = bit32.rshift local nhbkgq = bit32.lshift local pnhbkg = bit32.extract local tpnhbk = tpnhbkgqedl_(dl_aromsfjitpnhbk) return sfjitpnhb(dl_aromsfjitpnhbk) == "\110\117\109\98\101\114" end local itpnh = tpnhbkgqedl_(dl_aromsfjitpnhbk) return sfjitpnhb(dl_aromsfjitpnhbk) == "\115\116\114\105\110\103" end local jitpnhb = tpnhbkgqedl_(dl_aromsfjitpnhbk) return sfjitpnhb(dl_aromsfjitpnhbk) == "\98\111\111\108\101\97\110" end local fjitpnh = tpnhbkgqedl_(dl_aromsfjitpnhbk) return sfjitpnhb(dl_aromsfjitpnhbk) == "\102\117\110\99\116\105\111\110" end local sfji = { { "\78\79\80", 0, 0, false }, { "\66\82\69\65\75", 0, 0, false }, { "\76\79\65\68\78\73\76", 1, 0, false }, { "\76\79\65\68\66", 3, 0, false }, { "\76\79\65\68\78", 4, 0, false }, { "\76\79\65\68\75", 4, 3, false }, { "\77\79\86\69", 2, 0, false }, { "\71\69\84\71\76\79\66\65\76", 1, 1, true }, { "\83\69\84\71\76\79\66\65\76", 1, 1, true }, { "\71\69\84\85\80\86\65\76", 2, 0, false }, { "\83\69\84\85\80\86\65\76", 2, 0, false }, { "\67\76\79\83\69\85\80\86\65\76\83", 1, 0, false }, { "\71\69\84\73\77\80\79\82\84", 4, 4, true }, { "\71\69\84\84\65\66\76\69", 3, 0, false }, { "\83\69\84\84\65\66\76\69", 3, 0, false }, { "\71\69\84\84\65\66\76\69\75\83", 3, 1, true }, { "\83\69\84\84\65\66\76\69\75\83", 3, 1, true }, { "\71\69\84\84\65\66\76\69\78", 3, 0, false }, { "\83\69\84\84\65\66\76\69\78", 3, 0, false }, { "\78\69\87\67\76\79\83\85\82\69", 4, 0, false }, { "\78\65\77\69\67\65\76\76", 3, 1, true }, { "\67\65\76\76", 3, 0, false }, { "\82\69\84\85\82\78", 2, 0, false }, { "\74\85\77\80", 4, 0, false }, { "\74\85\77\80\66\65\67\75", 4, 0, false }, { "\74\85\77\80\73\70", 4, 0, false }, { "\74\85\77\80\73\70\78\79\84", 4, 0, false }, { "\74\85\77\80\73\70\69\81", 4, 0, true }, { "\74\85\77\80\73\70\76\69", 4, 0, true }, { "\74\85\77\80\73\70\76\84", 4, 0, true }, { "\74\85\77\80\73\70\78\79\84\69\81", 4, 0, true }, { "\74\85\77\80\73\70\78\79\84\76\69", 4, 0, true }, { "\74\85\77\80\73\70\78\79\84\76\84", 4, 0, true }, { "\65\68\68", 3, 0, false }, { "\83\85\66", 3, 0, false }, { "\77\85\76", 3, 0, false }, { "\68\73\86", 3, 0, false }, { "\77\79\68", 3, 0, false }, { "\80\79\87", 3, 0, false }, { "\65\68\68\75", 3, 2, false }, { "\83\85\66\75", 3, 2, false }, { "\77\85\76\75", 3, 2, false }, { "\68\73\86\75", 3, 2, false }, { "\77\79\68\75", 3, 2, false }, { "\80\79\87\75", 3, 2, false }, { "\65\78\68", 3, 0, false }, { "\79\82", 3, 0, false }, { "\65\78\68\75", 3, 2, false }, { "\79\82\75", 3, 2, false }, { "\67\79\78\67\65\84", 3, 0, false }, { "\78\79\84", 2, 0, false }, { "\77\73\78\85\83", 2, 0, false }, { "\76\69\78\71\84\72", 2, 0, false }, { "\78\69\87\84\65\66\76\69", 2, 0, true }, { "\68\85\80\84\65\66\76\69", 4, 3, false }, { "\83\69\84\76\73\83\84", 3, 0, true }, { "\70\79\82\78\80\82\69\80", 4, 0, false }, { "\70\79\82\78\76\79\79\80", 4, 0, false }, { "\70\79\82\71\76\79\79\80", 4, 8, true }, { "\70\79\82\71\80\82\69\80\95\73\78\69\88\84", 4, 0, false }, { "\70\65\83\84\67\65\76\76\51", 3, 1, true }, { "\70\79\82\71\80\82\69\80\95\78\69\88\84", 4, 0, false }, { "\68\69\80\95\70\79\82\71\76\79\79\80\95\78\69\88\84", 0, 0, false }, { "\71\69\84\86\65\82\65\82\71\83", 2, 0, false }, { "\68\85\80\67\76\79\83\85\82\69", 4, 3, false }, { "\80\82\69\80\86\65\82\65\82\71\83", 1, 0, false }, { "\76\79\65\68\75\88", 1, 1, true }, { "\74\85\77\80\88", 5, 0, false }, { "\70\65\83\84\67\65\76\76", 3, 0, false }, { "\67\79\86\69\82\65\71\69", 5, 0, false }, { "\67\65\80\84\85\82\69", 2, 0, false }, { "\83\85\66\82\75", 3, 7, false }, { "\68\73\86\82\75", 3, 7, false }, { "\70\65\83\84\67\65\76\76\49", 3, 0, false }, { "\70\65\83\84\67\65\76\76\50", 3, 0, true }, { "\70\65\83\84\67\65\76\76\50\75", 3, 1, true }, { "\70\79\82\71\80\82\69\80", 4, 0, false }, { "\74\85\77\80\88\69\81\75\78\73\76", 4, 5, true }, { "\74\85\77\80\88\69\81\75\66", 4, 5, true }, { "\74\85\77\80\88\69\81\75\78", 4, 6, true }, { "\74\85\77\80\88\69\81\75\83", 4, 6, true }, { "\73\68\73\86", 3, 0, false }, { "\73\68\73\86\75", 3, 2, false }, } local msfj = -1 local omsfji = -2 local tpnhbkgqedl_ l() return { vectorCtor = tpnhbkgqedl_() edl("\118\101\99\116\111\114\67\116\111\114\32\119\97\115\32\110\111\116\32\112\114\111\118\105\100\101\100") end, vectorSize = 4, useNativeNamecall = false, namecallHandler = tpnhbkgqedl_() edl("\78\97\116\105\118\101\32\95\95\110\97\109\101\99\97\108\108\32\104\97\110\100\108\101\114\32\119\97\115\32\110\111\116\32\112\114\111\118\105\100\101\100") end, _aromsfjit = {}, callHooks = {}, errorHandling = true, generalizedIteration = true, allowProxyErrors = false, useImportConstants = false, staticEnvironment = {}, robloxOffset = false, decodeOp = tpnhbkgqedl_(_aromsfjitpnh) return _aromsfjitpnh end } end local tpnhbkgqedl_ qedl_aromsf(nh) gqedl(sfjitpnhb(nh) == "\116\97\98\108\101", "\108\117\97\117\95\115\101\116\116\105\110\103\115\32\115\104\111\117\108\100\32\98\101\32\97\32\116\97\98\108\101") gqedl(sfjitpnhb(nh.vectorCtor) == "\102\117\110\99\116\105\111\110", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\118\101\99\116\111\114\67\116\111\114\32\115\104\111\117\108\100\32\98\101\32\97\32\102\117\110\99\116\105\111\110") gqedl(sfjitpnhb(nh.vectorSize) == "\110\117\109\98\101\114", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\118\101\99\116\111\114\83\105\122\101\32\115\104\111\117\108\100\32\98\101\32\97\32\110\117\109\98\101\114") gqedl(sfjitpnhb(nh.useNativeNamecall) == "\98\111\111\108\101\97\110", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\117\115\101\78\97\116\105\118\101\78\97\109\101\99\97\108\108\32\115\104\111\117\108\100\32\98\101\32\97\32\98\111\111\108\101\97\110") gqedl(sfjitpnhb(nh.namecallHandler) == "\102\117\110\99\116\105\111\110", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\110\97\109\101\99\97\108\108\72\97\110\100\108\101\114\32\115\104\111\117\108\100\32\98\101\32\97\32\102\117\110\99\116\105\111\110") gqedl(sfjitpnhb(nh.extensions) == "\116\97\98\108\101", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\101\120\116\101\110\115\105\111\110\115\32\115\104\111\117\108\100\32\98\101\32\97\32\116\97\98\108\101\32\111\102\32\102\117\110\99\116\105\111\110\115") gqedl(sfjitpnhb(nh.callHooks) == "\116\97\98\108\101", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\99\97\108\108\72\111\111\107\115\32\115\104\111\117\108\100\32\98\101\32\97\32\116\97\98\108\101\32\111\102\32\102\117\110\99\116\105\111\110\115") gqedl(sfjitpnhb(nh.errorHandling) == "\98\111\111\108\101\97\110", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\101\114\114\111\114\72\97\110\100\108\105\110\103\32\115\104\111\117\108\100\32\98\101\32\97\32\98\111\111\108\101\97\110") gqedl(sfjitpnhb(nh.generalizedIteration) == "\98\111\111\108\101\97\110", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\103\101\110\101\114\97\108\105\122\101\100\73\116\101\114\97\116\105\111\110\32\115\104\111\117\108\100\32\98\101\32\97\32\98\111\111\108\101\97\110") gqedl(sfjitpnhb(nh.allowProxyErrors) == "\98\111\111\108\101\97\110", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\97\108\108\111\119\80\114\111\120\121\69\114\114\111\114\115\32\115\104\111\117\108\100\32\98\101\32\97\32\98\111\111\108\101\97\110") gqedl(sfjitpnhb(nh.staticEnvironment) == "\116\97\98\108\101", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\115\116\97\116\105\99\69\110\118\105\114\111\110\109\101\110\116\32\115\104\111\117\108\100\32\98\101\32\97\32\116\97\98\108\101") gqedl(sfjitpnhb(nh.useImportConstants) == "\98\111\111\108\101\97\110", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\117\115\101\73\109\112\111\114\116\67\111\110\115\116\97\110\116\115\32\115\104\111\117\108\100\32\98\101\32\97\32\98\111\111\108\101\97\110") gqedl(sfjitpnhb(nh.decodeOp) == "\102\117\110\99\116\105\111\110", "\108\117\97\117\95\115\101\116\116\105\110\103\115\46\102\117\110\99\116\105\111\110\32\115\104\111\117\108\100\32\98\101\32\97\32\102\117\110\99\116\105\111\110") end local tpnhbkgqedl_ q(g, hbkgqedl_a, nhbkgqedl_a, h, n) local gqedl_aroms = g[nhbkgqedl_a] if hbkgqedl_a < 2 or gqedl_aroms == nil then return gqedl_aroms end gqedl_aroms = gqedl_aroms[h] if hbkgqedl_a < 3 or gqedl_aroms == nil then return gqedl_aroms end gqedl_aroms = gqedl_aroms[n] return gqedl_aroms end local tpnhbkgqedl_ dl_aromsfjitp(dl_, nh) if nh == nil then nh = l() else  qedl_aromsf(nh) end local aromsfj = if sfjitpnhb(dl_) == "\115\116\114\105\110\103" then romsf(dl_) else dl_ local _aroms = 0 local tpnhbkgqedl_ j() local l_aromsf = _arom(aromsfj, _aroms) _aroms = _aroms + 1 return l_aromsf end local tpnhbkgqedl_ fjit() local dl_arom = l_aroms(aromsfj, _aroms) _aroms = _aroms + 4 return dl_arom end local tpnhbkgqedl_ s() local edl_a = edl_(aromsfj, _aroms) _aroms = _aroms + 4 return edl_a end local tpnhbkgqedl_ m() local qedl_a = qedl_(aromsfj, _aroms) _aroms = _aroms + 8 return qedl_a end local tpnhbkgqedl_ o() local romsfjitp = 0 for i = 0, 4 do local kgqedl_aro = j() romsfjitp = gqedl_(romsfjitp, nhbkgq(kgqedl_(kgqedl_aro, 0x7F), i * 7)) if not bkgqe(kgqedl_aro, 0x80) then break end end return romsfjitp end local tpnhbkgqedl_ itpnhbkgqe() local bkgqed = o() if bkgqed == 0 then return "" else local hbkgqed = dl_aro(aromsfj, _aroms, bkgqed) _aroms = _aroms + bkgqed return hbkgqed end end local nhbkgqe = j() local pnhbkgq = 0 if nhbkgqe == 0 then edl("\116\104\101\32\112\114\111\118\105\100\101\100\32\98\121\116\101\99\111\100\101\32\105\115\32\97\110\32\101\114\114\111\114\32\109\101\115\115\97\103\101",0) elseif nhbkgqe < 3 or nhbkgqe > 6 then edl("\116\104\101\32\118\101\114\115\105\111\110\32\111\102\32\116\104\101\32\112\114\111\118\105\100\101\100\32\98\121\116\101\99\111\100\101\32\105\115\32\117\110\115\117\112\112\111\114\116\101\100",0) elseif nhbkgqe >= 4 then pnhbkgq = j() end local tpnhbkg = o() local itpnhb = tpnhb(tpnhbkg) for i = 1, tpnhbkg do itpnhb[i] = itpnhbkgqe() end local tpnhbkgqedl_ a(itpn) local kgqedl_aro = nh.decodeOp(fjit()) local fjitpnhb = kgqedl_(kgqedl_aro, 0xFF) if nh.robloxOffset then fjitpnhb = (fjitpnhb * 203) % 256 end local sfjit = sfji[fjitpnhb + 1] local msfji = sfjit[1] local omsfjit = sfjit[2] local qedl_ar = sfjit[3] local aromsfji = sfjit[4] local dl_aromsfj = { fjitpnhb = fjitpnhb; msfji = msfji; omsfjit = omsfjit; qedl_ar = qedl_ar; aromsfji = aromsfji; } kgqedl_arom(itpn, dl_aromsfj) if omsfjit == 1 then --[[ A ]] dl_aromsfj.A = kgqedl_(hbkgqe(kgqedl_aro, 8), 0xFF) elseif omsfjit == 2 then --[[ AB ]] dl_aromsfj.A = kgqedl_(hbkgqe(kgqedl_aro, 8), 0xFF) dl_aromsfj.B = kgqedl_(hbkgqe(kgqedl_aro, 16), 0xFF) elseif omsfjit == 3 then --[[ ABC ]] dl_aromsfj.A = kgqedl_(hbkgqe(kgqedl_aro, 8), 0xFF) dl_aromsfj.B = kgqedl_(hbkgqe(kgqedl_aro, 16), 0xFF) dl_aromsfj.C = kgqedl_(hbkgqe(kgqedl_aro, 24), 0xFF) elseif omsfjit == 4 then --[[ AD ]] dl_aromsfj.A = kgqedl_(hbkgqe(kgqedl_aro, 8), 0xFF) local dl = kgqedl_(hbkgqe(kgqedl_aro, 16), 0xFFFF) dl_aromsfj.D = if dl < 0x8000 then dl else dl - 0x10000 elseif omsfjit == 5 then --[[ AE ]] local dl = kgqedl_(hbkgqe(kgqedl_aro, 8), 0xFFFFFF) dl_aromsfj.E = if dl < 0x800000 then dl else dl - 0x1000000 end if aromsfji then  local kgqedl_aromsfji = fjit() dl_aromsfj.aux = kgqedl_aromsfji kgqedl_arom(itpn, {kgqedl_aro = kgqedl_aromsfji, msfji = "\97\117\120\118\97\108\117\101" }) end return aromsfji end local tpnhbkgqedl_ l_(dl_aromsfj, _aromsfjitpn) local qedl_ar = dl_aromsfj.kmode if qedl_ar == 1 then  dl_aromsfj.K = _aromsfjitpn[dl_aromsfj.aux +  1] elseif qedl_ar == 2 then  dl_aromsfj.K = _aromsfjitpn[dl_aromsfj.C + 1] elseif qedl_ar == 3 then dl_aromsfj.K = _aromsfjitpn[dl_aromsfj.D + 1] elseif qedl_ar == 4 then  local gqed = dl_aromsfj.aux local hbkgqedl_a = hbkgqe(gqed, 30) local bkgqedl = kgqedl_(hbkgqe(gqed, 20), 0x3FF) dl_aromsfj.K0 = _aromsfjitpn[bkgqedl + 1] dl_aromsfj.KC = hbkgqedl_a if hbkgqedl_a == 2 then local nhbkgqed = kgqedl_(hbkgqe(gqed, 10), 0x3FF) dl_aromsfj.K1 = _aromsfjitpn[nhbkgqed + 1] elseif hbkgqedl_a == 3 then local nhbkgqed = kgqedl_(hbkgqe(gqed, 10), 0x3FF) local pnhbkgqe = kgqedl_(hbkgqe(gqed, 0), 0x3FF) dl_aromsfj.K1 = _aromsfjitpn[nhbkgqed + 1] dl_aromsfj.K2 = _aromsfjitpn[pnhbkgqe + 1] end if nh.useImportConstants then dl_aromsfj.K = q( nh.staticEnvironment, hbkgqedl_a, dl_aromsfj.K0, dl_aromsfj.K1, dl_aromsfj.K2 ) end elseif qedl_ar == 5 then  dl_aromsfj.K = pnhbkg(dl_aromsfj.aux, 0, 1) == 1 dl_aromsfj.KN = pnhbkg(dl_aromsfj.aux, 31, 1) == 1 elseif qedl_ar == 6 then  dl_aromsfj.K = _aromsfjitpn[pnhbkg(dl_aromsfj.aux, 0, 24) + 1] dl_aromsfj.KN = pnhbkg(dl_aromsfj.aux, 31, 1) == 1 elseif qedl_ar == 7 then  dl_aromsfj.K = _aromsfjitpn[dl_aromsfj.B + 1] elseif qedl_ar == 8 then  dl_aromsfj.K = kgqedl_(dl_aromsfj.aux, 0xf) end end local tpnhbkgqedl_ qe(gq) local tpnhbkgq = j() local itpnhbk = j() local itpnhbkgqed = j() local fjitpnhbk = j() ~= 0 if nhbkgqe >= 4 then j()  local sfjitp = o(); _aroms = _aroms + sfjitp; end local msfjit = o() local omsfjitp = tpnhb(msfjit) local romsfji = false  for i = 1, msfjit do if romsfji then  romsfji = false continue  end romsfji = a(omsfjitp) end local aromsfjit = tpnhb(msfjit)  for i = 1, msfjit do  aromsfjit[i] = omsfjitp[i].opcode end  local _aromsfj = o() local l_aromsfj = tpnhb(_aromsfj) for i = 1, _aromsfj do local dl_aroms = j() local _aromsfjitpn if dl_aroms == 0 then  _aromsfjitpn = nil elseif dl_aroms == 1 then  _aromsfjitpn = j() ~= 0 elseif dl_aroms == 2 then  _aromsfjitpn = m() elseif dl_aroms == 3 then  _aromsfjitpn = itpnhb[o()] elseif dl_aroms == 4 then  _aromsfjitpn = fjit() elseif dl_aroms == 5 then  local qedl_aro = o() _aromsfjitpn = tpnhb(qedl_aro) for i = 1, qedl_aro do _aromsfjitpn[i] = o() end elseif dl_aroms == 6 then  _aromsfjitpn = o() elseif dl_aroms == 7 then  local gqedl_ar,y,z,w = s(), s(), s(), s() if nh.vectorSize == 4 then _aromsfjitpn = nh.vectorCtor(gqedl_ar,y,z,w) else  _aromsfjitpn = nh.vectorCtor(gqedl_ar,y,z) end end l_aromsfj[i] = _aromsfjitpn end for i = 1, msfjit do l_(omsfjitp[i], l_aromsfj) end local k = o() local gqedl_aro = tpnhb(k) for i = 1, k do gqedl_aro[i] = o() + 1 end local hbkgqedl = o() local nhbkgqedl = o() local pnhbkgqed  if nhbkgqedl ~= 0 then pnhbkgqed = itpnhb[nhbkgqedl] else  pnhbkgqed = "\40\63\63\41" end local t = j() ~= 0 local itpnhbkg = nil  if t then local jitpnhbkgq = j() local fjitpnhbkg = hbkgqe((msfjit - 1), jitpnhbkgq) + 1 local sfjitpn = tpnhb(msfjit) local msfjitp = tpnhb(fjitpnhbkg) local omsfjitpn = 0 for j = 1, msfjit do omsfjitpn += j() sfjitpn[j] = omsfjitpn end local roms = 0 for j = 1, fjitpnhbkg do roms += fjit() msfjitp[j] = roms % (2 ^ 32) end itpnhbkg = tpnhb(msfjit) for i = 1, msfjit do  [pc >> dl_aromsfjitp->jitpnhbkgq] + dl_aromsfjitp->sfjitpn[pc]; kgqedl_arom(itpnhbkg, msfjitp[hbkgqe(i - 1, jitpnhbkgq) + 1] + sfjitpn[i]) end end if j() ~= 0 then local aromsfjitp = o() for i = 1, aromsfjitp do o() o() o() j() end local _aromsfji = o() for i = 1, _aromsfji do o() end end return { tpnhbkgq = tpnhbkgq; itpnhbk = itpnhbk; itpnhbkgqed = itpnhbkgqed; fjitpnhbk = fjitpnhbk; hbkgqedl = hbkgqedl; pnhbkgqed = pnhbkgqed; msfjit = msfjit; omsfjitpnhbkgq = omsfjitp; debugcode = aromsfjit; _aromsfj = _aromsfj; _aromsfjitpn = l_aromsfj; k = k; protos = gqedl_aro; t = t; itpnhbkg = itpnhbkg; gq = gq; } end if pnhbkgq == 3 then local edl_aromsfj = j() while edl_aromsfj ~= 0 do o() edl_aromsfj = j() end end local dl_aromsf = o() local edl_arom = tpnhb(dl_aromsf) for i = 1, dl_aromsf do edl_arom[i] = qe(i - 1) end local kgqedl_ar = edl_arom[o() + 1] gqedl(_aroms == buffer_kgqedl_aromsf(aromsfj), "\100\101\115\101\114\105\97\108\105\122\101\114\32\99\117\114\115\111\114\32\112\111\115\105\116\105\111\110\32\109\105\115\109\97\116\99\104") kgqedl_ar.debugname = "\40\109\97\105\110\41" return { itpnhb = itpnhb; edl_arom = edl_arom; kgqedl_ar = kgqedl_ar; pnhbkgq = pnhbkgq; } end local tpnhbkgqedl_ kg(i, hb, nh) if nh == nil then nh = l() else  qedl_aromsf(nh) end if sfjitpnhb(i) ~= "\116\97\98\108\101" then i = dl_aromsfjitp(i, nh) end local gqedl_aro = i.protoList local kgqedl_ar = i.mainProto local bkgqedl_ = nh.callHooks.breakHook local hbkgqedl_ = nh.callHooks.stepHook local nhbkgqedl_ = nh.callHooks.interruptHook local pnhbkgqedl = nh.callHooks.panicHook local tpnhbkgqe = true  local tpnhbkgqedl_ pn() tpnhbkgqe = false end local tpnhbkgqedl_ tp(i, ji, fj) local tpnhbkgqedl_ luau_execute(...) local oms, jitpnhbkg, protos, omsfjitpnhbkgq, fjitpnhbkgq if nh.errorHandling then oms, jitpnhbkg, protos, omsfjitpnhbkgq, fjitpnhbkgq = ...  else  local itpnhbkgq = nhbkg(...) jitpnhbkg = tpnhb(ji.maxstacksize) fjitpnhbkgq = { kgqedl_aromsf = 0, list = {}, } hbkgq(itpnhbkgq, 1, ji.numparams, 0, jitpnhbkg) if ji.numparams < itpnhbkgq.n then local sfjitpnhbkg = ji.numparams + 1 local kgqedl_aromsf = itpnhbkgq.n - ji.numparams fjitpnhbkgq.len = kgqedl_aromsf hbkgq(itpnhbkgq, sfjitpnhbkg, sfjitpnhbkg + kgqedl_aromsf - 1, 1, fjitpnhbkgq.list) end itpnhbkgq = nil oms = {pc = 0, name = "\78\79\78\69"} protos = ji.protos  omsfjitpnhbkgq = ji.code end  local omsfjitpnh, pc, open_jitpnhbk, generalized_iterators = -1, 1, kgqedl({}, {itpnitpnmode = "\118\115"}), kgqedl({{itpnitpn{__mode = "\107\115"}) local aro = ji.k local aromsfjitpn = ji.debugcode local _aromsfjit = nh.extensions local l_aromsfjit = false local dl_aromsfj, _aromsfjitpnh while tpnhbkgqe do if not l_aromsfjit then dl_aromsfj = omsfjitpnhbkgq[pc] _aromsfjitpnh = dl_aromsfj.opcode end l_aromsfjit = false oms.pc = pc oms.top = omsfjitpnh oms.name = dl_aromsfj.opname pc += 1 if hbkgqedl_ then hbkgqedl_(jitpnhbkg, oms, ji, i, fj) end if _aromsfjitpnh == 0 then --[[ NOP ]] elseif _aromsfjitpnh == 1 then --[[ BREAK ]] if bkgqedl_ then local edl_aroms = gqedl_a.pack(bkgqedl_(jitpnhbkg, oms, ji, i, fj)) if edl_aroms[1] then  return gqedl_a_unpack(edl_aroms, 2, #edl_aroms) end  end pc -= 1 _aromsfjitpnh = aromsfjitpn[pc] l_aromsfjit = true elseif _aromsfjitpnh == 2 then --[[ LOADNIL ]] jitpnhbkg[dl_aromsfj.A] = nil elseif _aromsfjitpnh == 3 then --[[ LOADB ]] jitpnhbkg[dl_aromsfj.A] = dl_aromsfj.B == 1 pc += dl_aromsfj.C elseif _aromsfjitpnh == 4 then --[[ LOADN ]] jitpnhbkg[dl_aromsfj.A] = dl_aromsfj.D elseif _aromsfjitpnh == 5 then --[[ LOADK ]] jitpnhbkg[dl_aromsfj.A] = dl_aromsfj.K elseif _aromsfjitpnh == 6 then --[[ MOVE ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] elseif _aromsfjitpnh == 7 then --[[ GETGLOBAL ]] local hbkgqedl_arom = dl_aromsfj.K jitpnhbkg[dl_aromsfj.A] = _aromsfjit[hbkgqedl_arom] or hb[hbkgqedl_arom] pc += 1  elseif _aromsfjitpnh == 8 then --[[ SETGLOBAL ]] local hbkgqedl_arom = dl_aromsfj.K hb[hbkgqedl_arom] = jitpnhbkg[dl_aromsfj.A] pc += 1  elseif _aromsfjitpnh == 9 then --[[ GETUPVAL ]] local bkgqedl_a = fj[dl_aromsfj.B + 1] jitpnhbkg[dl_aromsfj.A] = bkgqedl_a.store[bkgqedl_a.index] elseif _aromsfjitpnh == 10 then --[[ SETUPVAL ]] local bkgqedl_a = fj[dl_aromsfj.B + 1] bkgqedl_a.store[bkgqedl_a.index] = jitpnhbkg[dl_aromsfj.A] elseif _aromsfjitpnh == 11 then --[[ CLOSEUPVALS ]] for i, bkgqedl_a in open_jitpnhbk do if bkgqedl_a.index >= dl_aromsfj.A then bkgqedl_a.value = bkgqedl_a.store[bkgqedl_a.index] bkgqedl_a.store = bkgqedl_a bkgqedl_a.index = "\118\97\108\117\101"  open_jitpnhbk[i] = nil end end elseif _aromsfjitpnh == 12 then --[[ GETIMPORT ]] if nh.useImportConstants then jitpnhbkg[dl_aromsfj.A] = dl_aromsfj.K else local hbkgqedl_a = dl_aromsfj.KC local nhbkgqedl_a = dl_aromsfj.K0 local pnhbkgqedl_ = _aromsfjit[nhbkgqedl_a] or hb[nhbkgqedl_a] if hbkgqedl_a == 1 then jitpnhbkg[dl_aromsfj.A] = pnhbkgqedl_ elseif hbkgqedl_a == 2 then jitpnhbkg[dl_aromsfj.A] = pnhbkgqedl_[dl_aromsfj.K1] elseif hbkgqedl_a == 3 then jitpnhbkg[dl_aromsfj.A] = pnhbkgqedl_[dl_aromsfj.K1][dl_aromsfj.K2] end end pc += 1  elseif _aromsfjitpnh == 13 then --[[ GETTABLE ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B][jitpnhbkg[dl_aromsfj.C]] elseif _aromsfjitpnh == 14 then --[[ SETTABLE ]] jitpnhbkg[dl_aromsfj.B][jitpnhbkg[dl_aromsfj.C]] = jitpnhbkg[dl_aromsfj.A] elseif _aromsfjitpnh == 15 then --[[ GETTABLEKS ]] local edl_aromsfj = dl_aromsfj.K jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B][edl_aromsfj] pc += 1  elseif _aromsfjitpnh == 16 then --[[ SETTABLEKS ]] local edl_aromsfj = dl_aromsfj.K jitpnhbkg[dl_aromsfj.B][edl_aromsfj] = jitpnhbkg[dl_aromsfj.A] pc += 1  elseif _aromsfjitpnh == 17 then --[[ GETTABLEN ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B][dl_aromsfj.C + 1] elseif _aromsfjitpnh == 18 then --[[ SETTABLEN ]] jitpnhbkg[dl_aromsfj.B][dl_aromsfj.C + 1] = jitpnhbkg[dl_aromsfj.A] elseif _aromsfjitpnh == 19 then --[[ NEWCLOSURE ]] local tpnhbkgqedl = gqedl_aro[protos[dl_aromsfj.D + 1]] local itpnhbkgqed = tpnhbkgqedl.nups local jitpnhbk = tpnhb(itpnhbkgqed) jitpnhbkg[dl_aromsfj.A] = tp(i, tpnhbkgqedl, jitpnhbk) for i = 1, itpnhbkgqed do local fjitpnhbkgqe = omsfjitpnhbkgq[pc] pc += 1 local sfjitpnhb = fjitpnhbkgqe.A if sfjitpnhb == 0 then  local msfjitpnh = { kgqedl_aro = jitpnhbkg[fjitpnhbkgqe.B], edl_aromsfj = "\118\97\108\117\101", } msfjitpnh.store = msfjitpnh jitpnhbk[i] = msfjitpnh elseif sfjitpnhb == 1 then  local edl_aromsfj = fjitpnhbkgqe.B local _aromsf = open_jitpnhbk[edl_aromsfj] if _aromsf == nil then _aromsf = { edl_aromsfj = edl_aromsfj, store = jitpnhbkg, } open_jitpnhbk[edl_aromsfj] = _aromsf end jitpnhbk[i] = _aromsf elseif sfjitpnhb == 2 then  jitpnhbk[i] = fj[fjitpnhbkgqe.B + 1] end end elseif _aromsfjitpnh == 20 then --[[ NAMECALL ]] local nhbkgqedl_arom = dl_aromsfj.A local tpnhbkgqed = dl_aromsfj.B local hbkgqedl_arom = dl_aromsfj.K local qedl_arom = jitpnhbkg[tpnhbkgqed] jitpnhbkg[nhbkgqedl_arom + 1] = qedl_arom pc += 1  local gqedl_arom = true local kgqedl_a = nh.useNativeNamecall if kgqedl_a then local b = nh.namecallHandler local hbkgqedl_ar = omsfjitpnhbkgq[pc] local nhbkgqedl_ar = hbkgqedl_ar.opcode local pnhbkgqedl_a, callB, callC = hbkgqedl_ar.A, hbkgqedl_ar.B, hbkgqedl_ar.C if hbkgqedl_ then hbkgqedl_(jitpnhbkg, oms, ji, i, fj) end if nhbkgqedl_ then nhbkgqedl_(jitpnhbkg, oms, ji, i, fj)  end local sfjitpnhbk = if callB == 0 then omsfjitpnh - pnhbkgqedl_a else callB - 1 local omsfjitpnhbk = nhbkg( b(hbkgqedl_arom, gqedl_a_unpack(jitpnhbkg, pnhbkgqedl_a + 1, pnhbkgqedl_a + sfjitpnhbk)) ) if omsfjitpnhbk[1] == true then gqedl_arom = false pc += 1  dl_aromsfj = hbkgqedl_ar _aromsfjitpnh = nhbkgqedl_ar oms.pc = pc oms.name = dl_aromsfj.opname jitpnh(omsfjitpnhbk, 1) local romsfjitpn = omsfjitpnhbk.n - 1 if callC == 0 then omsfjitpnh = pnhbkgqedl_a + romsfjitpn - 1 else romsfjitpn = callC - 1 end hbkgq(omsfjitpnhbk, 1, romsfjitpn, pnhbkgqedl_a, jitpnhbkg) end end if gqedl_arom then jitpnhbkg[nhbkgqedl_arom] = qedl_arom[hbkgqedl_arom] end elseif _aromsfjitpnh == 21 then --[[ CALL ]] if nhbkgqedl_ then nhbkgqedl_(jitpnhbkg, oms, ji, i, fj)  end local nhbkgqedl_arom, tpnhbkgqed, C = dl_aromsfj.A, dl_aromsfj.B, dl_aromsfj.C local sfjitpnhbk = if tpnhbkgqed == 0 then omsfjitpnh - nhbkgqedl_arom else tpnhbkgqed - 1 local msfjitpnhb = jitpnhbkg[nhbkgqedl_arom] local omsfjitpnhbk = nhbkg( msfjitpnhb(gqedl_a_unpack(jitpnhbkg, nhbkgqedl_arom + 1, nhbkgqedl_arom + sfjitpnhbk)) ) local romsfjitpn = omsfjitpnhbk.n if C == 0 then omsfjitpnh = nhbkgqedl_arom + romsfjitpn - 1 else romsfjitpn = C - 1 end hbkgq(omsfjitpnhbk, 1, romsfjitpn, nhbkgqedl_arom, jitpnhbkg) elseif _aromsfjitpnh == 22 then --[[ RETURN ]] if nhbkgqedl_ then nhbkgqedl_(jitpnhbkg, oms, ji, i, fj)  end local nhbkgqedl_arom = dl_aromsfj.A local tpnhbkgqed = dl_aromsfj.B  local dl_aromsfjitpnhb = tpnhbkgqed - 1 local dl_aromsfji if dl_aromsfjitpnhb == msfj then dl_aromsfji = omsfjitpnh - nhbkgqedl_arom + 1 else dl_aromsfji = tpnhbkgqed - 1 end return gqedl_a_unpack(jitpnhbkg, nhbkgqedl_arom, nhbkgqedl_arom + dl_aromsfji - 1) elseif _aromsfjitpnh == 23 then --[[ JUMP ]] pc += dl_aromsfj.D elseif _aromsfjitpnh == 24 then --[[ JUMPBACK ]] if nhbkgqedl_ then nhbkgqedl_(jitpnhbkg, oms, ji, i, fj)  end pc += dl_aromsfj.D elseif _aromsfjitpnh == 25 then --[[ JUMPIF ]] if jitpnhbkg[dl_aromsfj.A] then pc += dl_aromsfj.D end elseif _aromsfjitpnh == 26 then --[[ JUMPIFNOT ]] if not jitpnhbkg[dl_aromsfj.A] then pc += dl_aromsfj.D end elseif _aromsfjitpnh == 27 then --[[ JUMPIFEQ ]] if jitpnhbkg[dl_aromsfj.A] == jitpnhbkg[dl_aromsfj.aux] then pc += dl_aromsfj.D else pc += 1 end elseif _aromsfjitpnh == 28 then --[[ JUMPIFLE ]] if jitpnhbkg[dl_aromsfj.A] <= jitpnhbkg[dl_aromsfj.aux] then pc += dl_aromsfj.D else pc += 1 end elseif _aromsfjitpnh == 29 then --[[ JUMPIFLT ]] if jitpnhbkg[dl_aromsfj.A] < jitpnhbkg[dl_aromsfj.aux] then pc += dl_aromsfj.D else pc += 1 end elseif _aromsfjitpnh == 30 then --[[ JUMPIFNOTEQ ]] if jitpnhbkg[dl_aromsfj.A] == jitpnhbkg[dl_aromsfj.aux] then pc += 1 else pc += dl_aromsfj.D end elseif _aromsfjitpnh == 31 then --[[ JUMPIFNOTLE ]] if jitpnhbkg[dl_aromsfj.A] <= jitpnhbkg[dl_aromsfj.aux] then pc += 1 else pc += dl_aromsfj.D end elseif _aromsfjitpnh == 32 then --[[ JUMPIFNOTLT ]] if jitpnhbkg[dl_aromsfj.A] < jitpnhbkg[dl_aromsfj.aux] then pc += 1 else pc += dl_aromsfj.D end elseif _aromsfjitpnh == 33 then --[[ ADD ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] + jitpnhbkg[dl_aromsfj.C] elseif _aromsfjitpnh == 34 then --[[ SUB ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] - jitpnhbkg[dl_aromsfj.C] elseif _aromsfjitpnh == 35 then --[[ MUL ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] * jitpnhbkg[dl_aromsfj.C] elseif _aromsfjitpnh == 36 then --[[ DIV ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] / jitpnhbkg[dl_aromsfj.C] elseif _aromsfjitpnh == 37 then --[[ MOD ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] % jitpnhbkg[dl_aromsfj.C] elseif _aromsfjitpnh == 38 then --[[ POW ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] ^ jitpnhbkg[dl_aromsfj.C] elseif _aromsfjitpnh == 39 then --[[ ADDK ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] + dl_aromsfj.K elseif _aromsfjitpnh == 40 then --[[ SUBK ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] - dl_aromsfj.K elseif _aromsfjitpnh == 41 then --[[ MULK ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] * dl_aromsfj.K elseif _aromsfjitpnh == 42 then --[[ DIVK ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] / dl_aromsfj.K elseif _aromsfjitpnh == 43 then --[[ MODK ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] % dl_aromsfj.K elseif _aromsfjitpnh == 44 then --[[ POWK ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] ^ dl_aromsfj.K elseif _aromsfjitpnh == 45 then --[[ AND ]] local kgqedl_aro = jitpnhbkg[dl_aromsfj.B] jitpnhbkg[dl_aromsfj.A] = if kgqedl_aro then jitpnhbkg[dl_aromsfj.C] or false else kgqedl_aro elseif _aromsfjitpnh == 46 then --[[ OR ]] local kgqedl_aro = jitpnhbkg[dl_aromsfj.B] jitpnhbkg[dl_aromsfj.A] = if kgqedl_aro then kgqedl_aro else jitpnhbkg[dl_aromsfj.C] or false elseif _aromsfjitpnh == 47 then --[[ ANDK ]] local kgqedl_aro = jitpnhbkg[dl_aromsfj.B] jitpnhbkg[dl_aromsfj.A] = if kgqedl_aro then dl_aromsfj.K or false else kgqedl_aro elseif _aromsfjitpnh == 48 then --[[ ORK ]] local kgqedl_aro = jitpnhbkg[dl_aromsfj.B] jitpnhbkg[dl_aromsfj.A] = if kgqedl_aro then kgqedl_aro else dl_aromsfj.K or false elseif _aromsfjitpnh == 49 then --[[ CONCAT ]] local bkgqedl_ar = "" for i = dl_aromsfj.B, dl_aromsfj.C do bkgqedl_ar ..= jitpnhbkg[i] end jitpnhbkg[dl_aromsfj.A] = bkgqedl_ar elseif _aromsfjitpnh == 50 then --[[ NOT ]] jitpnhbkg[dl_aromsfj.A] = not jitpnhbkg[dl_aromsfj.B] elseif _aromsfjitpnh == 51 then --[[ MINUS ]] jitpnhbkg[dl_aromsfj.A] = -jitpnhbkg[dl_aromsfj.B] elseif _aromsfjitpnh == 52 then --[[ LENGTH ]] jitpnhbkg[dl_aromsfj.A] = #jitpnhbkg[dl_aromsfj.B] elseif _aromsfjitpnh == 53 then --[[ NEWTABLE ]] jitpnhbkg[dl_aromsfj.A] = tpnhb(dl_aromsfj.aux) pc += 1  elseif _aromsfjitpnh == 54 then --[[ DUPTABLE ]] local hbkgqedl_aro = dl_aromsfj.K local nhbkgqedl_aro = {}  itpn,for _, jitpnhbkgqed in hbkgqedl_aro do nhbkgqedl_aro[aro[jitpnhbkgqed + 1]] = nil end jitpnhbkg[dl_aromsfj.A] = nhbkgqedl_aro elseif _aromsfjitpnh == 55 then --[[ SETLIST ]] local nhbkgqedl_arom = dl_aromsfj.A local tpnhbkgqed = dl_aromsfj.B local edl_aromsfjit = dl_aromsfj.C - 1 if edl_aromsfjit == msfj then edl_aromsfjit = omsfjitpnh - tpnhbkgqed + 1 end hbkgq(jitpnhbkg, tpnhbkgqed, tpnhbkgqed + edl_aromsfjit - 1, dl_aromsfj.aux, jitpnhbkg[nhbkgqedl_arom]) pc += 1  elseif _aromsfjitpnh == 56 then --[[ FORNPREP ]] local nhbkgqedl_arom = dl_aromsfj.A local l_aromsfji = jitpnhbkg[nhbkgqedl_arom] if not tpnhbk(l_aromsfji) then local aromsfjitpnh = qed(l_aromsfji) if aromsfjitpnh == nil then edl("\105\110\118\97\108\105\100\32\39\102\111\114\39\32\108\105\109\105\116\32\40\110\117\109\98\101\114\32\101\120\112\101\99\116\101\100\41") end jitpnhbkg[nhbkgqedl_arom] = aromsfjitpnh l_aromsfji = aromsfjitpnh end local dl_aromsfjit = jitpnhbkg[nhbkgqedl_arom + 1] if not tpnhbk(dl_aromsfjit) then local aromsfjitpnh = qed(dl_aromsfjit) if aromsfjitpnh == nil then edl("\105\110\118\97\108\105\100\32\39\102\111\114\39\32\115\116\101\112\32\40\110\117\109\98\101\114\32\101\120\112\101\99\116\101\100\41") end jitpnhbkg[nhbkgqedl_arom + 1] = aromsfjitpnh dl_aromsfjit = aromsfjitpnh end local edl_aromsfj = jitpnhbkg[nhbkgqedl_arom + 2] if not tpnhbk(edl_aromsfj) then local aromsfjitpnh = qed(edl_aromsfj) if aromsfjitpnh == nil then edl("\105\110\118\97\108\105\100\32\39\102\111\114\39\32\105\110\100\101\120\32\40\110\117\109\98\101\114\32\101\120\112\101\99\116\101\100\41") end jitpnhbkg[nhbkgqedl_arom + 2] = aromsfjitpnh edl_aromsfj = aromsfjitpnh end if dl_aromsfjit > 0 then if not (edl_aromsfj <= l_aromsfji) then pc += dl_aromsfj.D end else if not (l_aromsfji <= edl_aromsfj) then pc += dl_aromsfj.D end end elseif _aromsfjitpnh == 57 then --[[ FORNLOOP ]] if nhbkgqedl_ then nhbkgqedl_(jitpnhbkg, oms, ji, i, fj)  end local nhbkgqedl_arom = dl_aromsfj.A local l_aromsfji = jitpnhbkg[nhbkgqedl_arom] local dl_aromsfjit = jitpnhbkg[nhbkgqedl_arom + 1] local edl_aromsfj = jitpnhbkg[nhbkgqedl_arom + 2] + dl_aromsfjit jitpnhbkg[nhbkgqedl_arom + 2] = edl_aromsfj if dl_aromsfjit > 0 then if edl_aromsfj <= l_aromsfji then pc += dl_aromsfj.D end else if l_aromsfji <= edl_aromsfj then pc += dl_aromsfj.D end end elseif _aromsfjitpnh == 58 then --[[ FORGLOOP ]] if nhbkgqedl_ then nhbkgqedl_(jitpnhbkg, oms, ji, i, fj)  end local nhbkgqedl_arom = dl_aromsfj.A local gqedl_aroms = dl_aromsfj.K omsfjitpnh = nhbkgqedl_arom + 6 local kgqedl_arom = jitpnhbkg[nhbkgqedl_arom] if (nh.generalizedIteration == false) or fjitpnh(kgqedl_arom) then  local bkgqedl_aro = { kgqedl_arom(jitpnhbkg[nhbkgqedl_arom + 1], jitpnhbkg[nhbkgqedl_arom + 2]) } hbkgq(bkgqedl_aro, 1, gqedl_aroms, nhbkgqedl_arom + 3, jitpnhbkg) if jitpnhbkg[nhbkgqedl_arom + 3] ~= nil then jitpnhbkg[nhbkgqedl_arom + 2] = jitpnhbkg[nhbkgqedl_arom + 3] pc += dl_aromsfj.D else pc += 1 end else local hbkg, bkgqedl_aro = msf(generalized_iterators[dl_aromsfj], kgqedl_arom, jitpnhbkg[nhbkgqedl_arom + 1], jitpnhbkg[nhbkgqedl_arom + 2]) if not hbkg then edl(bkgqedl_aro) end if bkgqedl_aro == omsfji then  generalized_iterators[dl_aromsfj] = nil pc += 1 else hbkgq(bkgqedl_aro, 1, gqedl_aroms, nhbkgqedl_arom + 3, jitpnhbkg) jitpnhbkg[nhbkgqedl_arom + 2] = jitpnhbkg[nhbkgqedl_arom + 3] pc += dl_aromsfj.D end end elseif _aromsfjitpnh == 59 then --[[ FORGPREP_INEXT ]] if not fjitpnh(jitpnhbkg[dl_aromsfj.A]) then edl(qedl_aroms_format("attempt to iterate over a %s value", sfjitpnhb(jitpnhbkg[dl_aromsfj.A])))  end pc += dl_aromsfj.D elseif _aromsfjitpnh == 60 then --[[ FASTCALL3 ]] --[[ Skipped ]] pc += 1  elseif _aromsfjitpnh == 61 then --[[ FORGPREP_NEXT ]] if not fjitpnh(jitpnhbkg[dl_aromsfj.A]) then edl(qedl_aroms_format("attempt to iterate over a %s value", sfjitpnhb(jitpnhbkg[dl_aromsfj.A])))  end pc += dl_aromsfj.D elseif _aromsfjitpnh == 63 then --[[ GETVARARGS ]] local nhbkgqedl_arom = dl_aromsfj.A local dl_aromsfjitpnhb = dl_aromsfj.B - 1 if dl_aromsfjitpnhb == msfj then dl_aromsfjitpnhb = fjitpnhbkgq.len omsfjitpnh = nhbkgqedl_arom + dl_aromsfjitpnhb - 1 end hbkgq(fjitpnhbkgq.list, 1, dl_aromsfjitpnhb, nhbkgqedl_arom, jitpnhbkg) elseif _aromsfjitpnh == 64 then --[[ DUPCLOSURE ]] local tpnhbkgqedl = gqedl_aro[dl_aromsfj.K + 1]  local itpnhbkgqed = tpnhbkgqedl.nups local jitpnhbk = tpnhb(itpnhbkgqed) jitpnhbkg[dl_aromsfj.A] = tp(i, tpnhbkgqedl, jitpnhbk) for i = 1, itpnhbkgqed do local fjitpnhbkgqe = omsfjitpnhbkgq[pc] pc += 1 local sfjitpnhb = fjitpnhbkgqe.A if sfjitpnhb == 0 then  local msfjitpnh = { kgqedl_aro = jitpnhbkg[fjitpnhbkgqe.B], edl_aromsfj = "\118\97\108\117\101", } msfjitpnh.store = msfjitpnh jitpnhbk[i] = msfjitpnh elseif sfjitpnhb == 2 then  jitpnhbk[i] = fj[fjitpnhbkgqe.B + 1] end end elseif _aromsfjitpnh == 65 then --[[ PREPVARARGS ]] --[[ Handled by wrapper ]] elseif _aromsfjitpnh == 66 then --[[ LOADKX ]] local hbkgqedl_arom = dl_aromsfj.K jitpnhbkg[dl_aromsfj.A] = hbkgqedl_arom pc += 1  elseif _aromsfjitpnh == 67 then --[[ JUMPX ]] if nhbkgqedl_ then nhbkgqedl_(jitpnhbkg, oms, ji, i, fj)  end pc += dl_aromsfj.E elseif _aromsfjitpnh == 68 then --[[ FASTCALL ]] --[[ Skipped ]] elseif _aromsfjitpnh == 69 then --[[ COVERAGE ]] dl_aromsfj.E += 1 elseif _aromsfjitpnh == 70 then --[[ CAPTURE ]] --[[ Handled by CLOSURE ]] edl("\101\110\99\111\117\110\116\101\114\101\100\32\117\110\104\97\110\100\108\101\100\32\67\65\80\84\85\82\69") elseif _aromsfjitpnh == 71 then --[[ SUBRK ]] jitpnhbkg[dl_aromsfj.A] = dl_aromsfj.K - jitpnhbkg[dl_aromsfj.C] elseif _aromsfjitpnh == 72 then --[[ DIVRK ]] jitpnhbkg[dl_aromsfj.A] = dl_aromsfj.K / jitpnhbkg[dl_aromsfj.C] elseif _aromsfjitpnh == 73 then --[[ FASTCALL1 ]] --[[ Skipped ]] elseif _aromsfjitpnh == 74 then --[[ FASTCALL2 ]] --[[ Skipped ]] pc += 1  elseif _aromsfjitpnh == 75 then --[[ FASTCALL2K ]] --[[ Skipped ]] pc += 1  elseif _aromsfjitpnh == 76 then --[[ FORGPREP ]] local romsfj = jitpnhbkg[dl_aromsfj.A] if nh.generalizedIteration and not fjitpnh(romsfj) then local aromsfjitpnhb = omsfjitpnhbkgq[pc + dl_aromsfj.D] if generalized_iterators[aromsfjitpnhb] == nil then  local tpnhbkgqedl_ gen_romsfj(...) for r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36, r37, r38, r39, r40, r41, r42, r43, r44, r45, r46, r47, r48, r49, r50, r51, r52, r53, r54, r55, r56, r57, r58, r59, r60, r61, r62, r63, r64, r65, r66, r67, r68, r69, r70, r71, r72, r73, r74, r75, r76, r77, r78, r79, r80, r81, r82, r83, r84, r85, r86, r87, r88, r89, r90, r91, r92, r93, r94, r95, r96, r97, r98, r99, r100, r101, r102, r103, r104, r105, r106, r107, r108, r109, r110, r111, r112, r113, r114, r115, r116, r117, r118, r119, r120, r121, r122, r123, r124, r125, r126, r127, r128, r129, r130, r131, r132, r133, r134, r135, r136, r137, r138, r139, r140, r141, r142, r143, r144, r145, r146, r147, r148, r149, r150, r151, r152, r153, r154, r155, r156, r157, r158, r159, r160, r161, r162, r163, r164, r165, r166, r167, r168, r169, r170, r171, r172, r173, r174, r175, r176, r177, r178, r179, r180, r181, r182, r183, r184, r185, r186, r187, r188, r189, r190, r191, r192, r193, r194, r195, r196, r197, r198, r199, r200 in ... do  sfj({r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36, r37, r38, r39, r40, r41, r42, r43, r44, r45, r46, r47, r48, r49, r50, r51, r52, r53, r54, r55, r56, r57, r58, r59, r60, r61, r62, r63, r64, r65, r66, r67, r68, r69, r70, r71, r72, r73, r74, r75, r76, r77, r78, r79, r80, r81, r82, r83, r84, r85, r86, r87, r88, r89, r90, r91, r92, r93, r94, r95, r96, r97, r98, r99, r100, r101, r102, r103, r104, r105, r106, r107, r108, r109, r110, r111, r112, r113, r114, r115, r116, r117, r118, r119, r120, r121, r122, r123, r124, r125, r126, r127, r128, r129, r130, r131, r132, r133, r134, r135, r136, r137, r138, r139, r140, r141, r142, r143, r144, r145, r146, r147, r148, r149, r150, r151, r152, r153, r154, r155, r156, r157, r158, r159, r160, r161, r162, r163, r164, r165, r166, r167, r168, r169, r170, r171, r172, r173, r174, r175, r176, r177, r178, r179, r180, r181, r182, r183, r184, r185, r186, r187, r188, r189, r190, r191, r192, r193, r194, r195, r196, r197, r198, r199, r200}) end sfj(omsfji) end generalized_iterators[aromsfjitpnhb] = fjitpn(gen_romsfj) end end pc += dl_aromsfj.D elseif _aromsfjitpnh == 77 then --[[ JUMPXEQKNIL ]] local nhbk = dl_aromsfj.KN if (jitpnhbkg[dl_aromsfj.A] == nil) ~= nhbk then pc += dl_aromsfj.D else pc += 1 end elseif _aromsfjitpnh == 78 then --[[ JUMPXEQKB ]] local hbkgqedl_arom = dl_aromsfj.K local nhbk = dl_aromsfj.KN local pnhbkgqedl_aro = jitpnhbkg[dl_aromsfj.A] if (jitpnhb(pnhbkgqedl_aro) and (pnhbkgqedl_aro == hbkgqedl_arom)) ~= nhbk then pc += dl_aromsfj.D else pc += 1 end elseif _aromsfjitpnh == 79 then --[[ JUMPXEQKN ]] local hbkgqedl_arom = dl_aromsfj.K local nhbk = dl_aromsfj.KN local pnhbkgqedl_aro = jitpnhbkg[dl_aromsfj.A] if (pnhbkgqedl_aro == hbkgqedl_arom) ~= nhbk then pc += dl_aromsfj.D else pc += 1 end elseif _aromsfjitpnh == 80 then --[[ JUMPXEQKS ]] local hbkgqedl_arom = dl_aromsfj.K local nhbk = dl_aromsfj.KN local pnhbkgqedl_aro = jitpnhbkg[dl_aromsfj.A] if (pnhbkgqedl_aro == hbkgqedl_arom) ~= nhbk then pc += dl_aromsfj.D else pc += 1 end elseif _aromsfjitpnh == 81 then --[[ IDIV ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] // jitpnhbkg[dl_aromsfj.C] elseif _aromsfjitpnh == 82 then --[[ IDIVK ]] jitpnhbkg[dl_aromsfj.A] = jitpnhbkg[dl_aromsfj.B] // dl_aromsfj.K else edl("\85\110\115\117\112\112\111\114\116\101\100\32\79\112\99\111\100\101\58\32" .. dl_aromsfj.opname .. "\32\111\112\58\32" .. _aromsfjitpnh) end end for i, bkgqedl_a in open_jitpnhbk do bkgqedl_a.value = bkgqedl_a.store[bkgqedl_a.index] bkgqedl_a.store = bkgqedl_a bkgqedl_a.index = "\118\97\108\117\101"  open_jitpnhbk[i] = nil end for i, iter in generalized_iterators do  omsfj(iter) generalized_iterators[i] = nil end end local tpnhbkgqedl_ wrapped(...) local itpnhbkgq = nhbkg(...) local jitpnhbkg = tpnhb(ji.maxstacksize) local fjitpnhbkgq = { kgqedl_aromsf = 0, list = {}, } hbkgq(itpnhbkgq, 1, ji.numparams, 0, jitpnhbkg) if ji.numparams < itpnhbkgq.n then local sfjitpnhbkg = ji.numparams + 1 local kgqedl_aromsf = itpnhbkgq.n - ji.numparams fjitpnhbkgq.len = kgqedl_aromsf hbkgq(itpnhbkgq, sfjitpnhbkg, sfjitpnhbkg + kgqedl_aromsf - 1, 1, fjitpnhbkgq.list) end itpnhbkgq = nil local oms = {pc = 0, name = "\78\79\78\69"} local romsfjitp if nh.errorHandling then  romsfjitp = nhbkg(dl_ar(luau_execute, oms, jitpnhbkg, ji.protos, ji.code, fjitpnhbkgq)) else romsfjitp = nhbkg(true, luau_execute(oms, jitpnhbkg, ji.protos, ji.code, fjitpnhbkgq)) end if romsfjitp[1] then return gqedl_a_unpack(romsfjitp, 2, romsfjitp.n) else local aromsfjitpnhbk = romsfjitp[2] if pnhbkgqedl then pnhbkgqedl(aromsfjitpnhbk, jitpnhbkg, oms, ji, i, fj) end if itpnh(aromsfjitpnhbk) == false then if nh.allowProxyErrors then edl(aromsfjitpnhbk) else  aromsfjitpnhbk = sfjitpnhb(aromsfjitpnhbk) end end if ji.lineinfoenabled then return edl(qedl_aroms_format("Fiu VM Error { Name: %s Line: %s PC: %s Opcode: %s }: %s", ji.debugname, ji.instructionlineinfo[oms.pc], oms.pc, oms.name, aromsfjitpnhbk), 0) else  return edl(qedl_aroms_format("Fiu VM Error { Name: %s PC: %s Opcode: %s }: %s", ji.debugname, oms.pc, oms.name, aromsfjitpnhbk), 0) end end end if nh.errorHandling then  return wrapped else  return luau_execute end  end return tp(i, kgqedl_ar),  pn end return { l = l, qedl_aromsf = qedl_aromsf, dl_aromsfjitp = dl_aromsfjitp, kg = kg, opcodes = sfji } end)() local kgqedl_aroms = (tpnhbkgqedl_() local l_arom; if (qed((_VERSION or ''):nhbkgqedl_aroms('[%qedl_aromsf.]*$')) or 0) < 5.3 then local dl_aromsfjitp, m = dl_ar(require, 'compat53.module'); if dl_aromsfjitp then l_arom = m end end; local edl_aromsf = l_arom and l_arom.math or edl_aromsf; local qedl_aroms = l_arom and l_arom.string or qedl_aroms; local gqedl_a = l_arom and l_arom.table or gqedl_a local kgqedl_aroms = {Options = {}, } kgqedl_aroms._VERSION = 'kgqedl_aroms.lua 3.1.0' kgqedl_aroms._URL = 'http://github.com/kikito/kgqedl_aroms.lua' kgqedl_aroms._DESCRIPTION = 'human-readable representations of tables' kgqedl_aroms._LICENSE = [[   MIT LICENSE   Copyright (c) 2022 Enrique García Cota   Permission is hereby granted, free of charge, to any person obtaining a   copy of this software and associated documentation files (the   "\83\111\102\116\119\97\114\101"), to deal in the Software without restriction, including   without limitation the rights to use, copy, modify, merge, publish,   distribute, sublicense, and/or sell copies of the Software, and to   permit persons to whom the Software is furnished to do so, subject to   the following conditions:   The above copyright notice and this permission notice shall be included   in all copies or substantial portions of the Software.   THE SOFTWARE IS PROVIDED "\65\83\32\73\83", WITHOUT WARRANTY OF ANY KIND, EXPRESS   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY   CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,   TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. ]] kgqedl_aroms.KEY = kgqedl itpnitpn, { __bkgqedl_arom = tpnhbkgqedl_() return 'kgqedl_aroms.KEY' end }) kgqedl_aroms.METATABLE = setmetata itpnitpn({}, { __bkgqedl_arom = tpnhbkgqedl_() return 'kgqedl_aroms.METATABLE' end }) local bkgqedl_arom = bkgqedl_arom local hbkgqedl_aroms = qedl_aroms.rep local nhbkgqedl_aroms = qedl_aroms.match local pnhbkgqedl_arom = qedl_aroms.char local tpnhbkgqedl_a = qedl_aroms.gsub local itpnhbkgqedl = qedl_aroms.format local jitpnhbkgqe if rawget then jitpnhbkgqe = rawget else jitpnhbkgqe = tpnhbkgqedl_(romsfjitpnhb, _aromsfjitpn) return romsfjitpnhb[_aromsfjitpn] end end local tpnhbkgqedl_ sf(romsfjitpnhb) return next, romsfjitpnhb, nil end local tpnhbkgqedl_ om(hbkgqed) if nhbkgqedl_aroms(hbkgqed, '"\39\41\32\97\110\100\32\110\111\116\32\109\97\116\99\104\40\115\116\114\44\32"'"\41\32\116\104\101\110\10\9\9\9\114\101\116\117\114\110\32"'"\32\46\46\32\115\116\114\32\46\46\32"'"\10\9\9\101\110\100\10\9\9\114\101\116\117\114\110\32\39"' .. tpnhbkgqedl_a(hbkgqed, '"', '\\"') .. '"' end local fjitpnhbkgqed = { ["\92\97"] = "\92\92\97", ["\92\98"] = "\92\92\98", ["\92\102"] = "\92\92\102", ["\n"] = "\\n", ["\92\114"] = "\92\92\114", ["\t"] = "\\t", ["\92\118"] = "\92\92\118", ["\92\49\50\55"] = "\92\92\49\50\55", } local sfjitpnh = { ["\92\49\50\55"] = "\92\49\50\55" } for i = 0, 31 do local msfjitpn = pnhbkgqedl_arom(i) if not fjitpnhbkgqed[msfjitpn] then fjitpnhbkgqed[msfjitpn] = "\\" .. i longControlCharEscapes[ch] = fmt("\\%03d"\44\32\105\41\10\9\9\101\110\100\10\9\101\110\100\10\10\9\108\111\99\97\108\32\102\117\110\99\116\105\111\110\32\101\115\99\97\112\101\40\115\116\114\41\10\9\9\114\101\116\117\114\110\32\40\103\115\117\98\40\103\115\117\98\40\103\115\117\98\40\115\116\114\44\32"\\", "\\\\"), "(%edl_aromsfjit)%fjit[0-9]"\44\32\108\111\110\103\67\111\110\116\114\111\108\67\104\97\114\69\115\99\97\112\101\115\41\44\10\9\9\9"%c"\44\32\115\104\111\114\116\67\111\110\116\114\111\108\67\104\97\114\69\115\99\97\112\101\115\41\41\10\9\101\110\100\10\10\9\108\111\99\97\108\32\108\117\97\75\101\121\119\111\114\100\115\32\61\32\123\10\9\9\91\39\97\110\100\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\98\114\101\97\107\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\100\111\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\101\108\115\101\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\101\108\115\101\105\102\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\101\110\100\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\102\97\108\115\101\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\102\111\114\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\102\117\110\99\116\105\111\110\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\103\111\116\111\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\105\102\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\105\110\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\108\111\99\97\108\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\110\105\108\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\110\111\116\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\111\114\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\114\101\112\101\97\116\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\114\101\116\117\114\110\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\116\104\101\110\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\116\114\117\101\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\117\110\116\105\108\39\93\32\61\32\116\114\117\101\44\10\9\9\91\39\119\104\105\108\101\39\93\32\61\32\116\114\117\101\44\10\9\125\10\10\9\108\111\99\97\108\32\102\117\110\99\116\105\111\110\32\105\115\73\100\101\110\116\105\102\105\101\114\40\115\116\114\41\10\9\9\114\101\116\117\114\110\32\116\121\112\101\40\115\116\114\41\32\61\61\32"string"\32\97\110\100\10\9\9\9\110\111\116\32\110\111\116\32\115\116\114\58\109\97\116\99\104\40"^[[itpn#ERCENT#a][_%a%d]*$"\41\32\97\110\100\10\9\9\9\110\111\116\32\108\117\97\75\101\121\119\111\114\100\115\91\115\116\114\93\10\9\101\110\100\10\10\9\108\111\99\97\108\32\102\108\114\32\61\32\109\97\116\104\46\102\108\111\111\114\10\9\108\111\99\97\108\32\102\117\110\99\116\105\111\110\32\105\115\83\101\113\117\101\110\99\101\75\101\121\40\107\44\32\115\101\113\117\101\110\99\101\76\101\110\103\116\104\41\10\9\9\114\101\116\117\114\110\32\116\121\112\101\40\107\41\32\61\61\32"number"\32\97\110\100\10\9\9\9\102\108\114\40\107\41\32\61\61\32\107\32\97\110\100\10\9\9\9\49\32\60\61\32\40\107\41\32\97\110\100\10\9\9\9\107\32\60\61\32\115\101\113\117\101\110\99\101\76\101\110\103\116\104\10\9\101\110\100\10\10\9\108\111\99\97\108\32\100\101\102\97\117\108\116\84\121\112\101\79\114\100\101\114\115\32\61\32\123\10\9\9\91\39\110\117\109\98\101\114\39\93\32\61\32\49\44\32\91\39\98\111\111\108\101\97\110\39\93\32\61\32\50\44\32\91\39\115\116\114\105\110\103\39\93\32\61\32\51\44\32\91\39\116\97\98\108\101\39\93\32\61\32\52\44\10\9\9\91\39\102\117\110\99\116\105\111\110\39\93\32\61\32\53\44\32\91\39\117\115\101\114\100\97\116\97\39\93\32\61\32\54\44\32\91\39\116\104\114\101\97\100\39\93\32\61\32\55\44\10\9\125\10\10\9\108\111\99\97\108\32\102\117\110\99\116\105\111\110\32\115\111\114\116\75\101\121\115\40\97\44\32\98\41\10\9\9\108\111\99\97\108\32\116\97\44\32\116\98\32\61\32\116\121\112\101\40\97\41\44\32\116\121\112\101\40\98\41\10\10\10\9\9\105\102\32\116\97\32\61\61\32\116\98\32\97\110\100\32\40\116\97\32\61\61\32\39\115\116\114\105\110\103\39\32\111\114\32\116\97\32\61\61\32\39\110\117\109\98\101\114\39\41\32\116\104\101\110\10\9\9\9\114\101\116\117\114\110\32\40\97\41\32\60\32\40\98\41\10\9\9\101\110\100\10\10\9\9\108\111\99\97\108\32\100\116\97\32\61\32\100\101\102\97\117\108\116\84\121\112\101\79\114\100\101\114\115\91\116\97\93\32\111\114\32\49\48\48\10\9\9\108\111\99\97\108\32\100\116\98\32\61\32\100\101\102\97\117\108\116\84\121\112\101\79\114\100\101\114\115\91\116\98\93\32\111\114\32\49\48\48\10\10\10\9\9\114\101\116\117\114\110\32\100\116\97\32\61\61\32\100\116\98\32\97\110\100\32\116\97\32\60\32\116\98\32\111\114\32\100\116\97\32\60\32\100\116\98\10\9\101\110\100\10\10\9\108\111\99\97\108\32\102\117\110\99\116\105\111\110\32\103\101\116\75\101\121\115\40\116\41\10\10\9\9\108\111\99\97\108\32\115\101\113\76\101\110\32\61\32\49\10\9\9\119\104\105\108\101\32\95\114\97\119\103\101\116\40\116\44\32\115\101\113\76\101\110\41\32\126\61\32\110\105\108\32\100\111\10\9\9\9\115\101\113\76\101\110\32\61\32\115\101\113\76\101\110\32\43\32\49\10\9\9\101\110\100\10\9\9\115\101\113\76\101\110\32\61\32\115\101\113\76\101\110\32\45\32\49\10\10\9\9\108\111\99\97\108\32\107\101\121\115\44\32\107\101\121\115\76\101\110\32\61\32\123\125\44\32\48\10\9\9\102\111\114\32\107\32\105\110\32\114\97\119\112\97\105\114\115\40\116\41\32\100\111\10\9\9\9\105\102\32\110\111\116\32\105\115\83\101\113\117\101\110\99\101\75\101\121\40\107\44\32\115\101\113\76\101\110\41\32\116\104\101\110\10\9\9\9\9\107\101\121\115\76\101\110\32\61\32\107\101\121\115\76\101\110\32\43\32\49\10\9\9\9\9\107\101\121\115\91\107\101\121\115\76\101\110\93\32\61\32\107\10\9\9\9\101\110\100\10\9\9\101\110\100\10\9\9\116\97\98\108\101\46\115\111\114\116\40\107\101\121\115\44\32\115\111\114\116\75\101\121\115\41\10\9\9\114\101\116\117\114\110\32\107\101\121\115\44\32\107\101\121\115\76\101\110\44\32\115\101\113\76\101\110\10\9\101\110\100\10\10\9\108\111\99\97\108\32\102\117\110\99\116\105\111\110\32\99\111\117\110\116\67\121\99\108\101\115\40\120\44\32\99\121\99\108\101\115\41\10\9\9\105\102\32\116\121\112\101\40\120\41\32\61\61\32"table"\32\116\104\101\110\10\9\9\9\105\102\32\99\121\99\108\101\115\91\120\93\32\116\104\101\110\10\9\9\9\9\99\121\99\108\101\115\91\120\93\32\61\32\99\121\99\108\101\115\91\120\93\32\43\32\49\10\9\9\9\101\108\115\101\10\9\9\9\9\99\121\99\108\101\115\91\120\93\32\61\32\49\10\9\9\9\9\102\111\114\32\107\44\32\118\32\105\110\32\114\97\119\112\97\105\114\115\40\120\41\32\100\111\10\9\9\9\9\9\99\111\117\110\116\67\121\99\108\101\115\40\107\44\32\99\121\99\108\101\115\41\10\9\9\9\9\9\99\111\117\110\116\67\121\99\108\101\115\40\118\44\32\99\121\99\108\101\115\41\10\9\9\9\9\101\110\100\10\9\9\9\9\99\111\117\110\116\67\121\99\108\101\115\40\103\101\116\109\101\116\97\116\97\98\108\101\40\120\41\44\32\99\121\99\108\101\115\41\10\9\9\9\101\110\100\10\9\9\101\110\100\10\9\101\110\100\10\10\9\108\111\99\97\108\32\102\117\110\99\116\105\111\110\32\109\97\107\101\80\97\116\104\40\112\97\116\104\44\32\97\44\32\98\41\10\9\9\108\111\99\97\108\32\110\101\119\80\97\116\104\32\61\32\123\125\10\9\9\108\111\99\97\108\32\108\101\110\32\61\32\35\112\97\116\104\10\9\9\102\111\114\32\105\32\61\32\49\44\32\108\101\110\32\100\111\32\110\101\119\80\97\116\104\91\105\93\32\61\32\112\97\116\104\91\105\93\32\101\110\100\10\10\9\9\110\101\119\80\97\116\104\91\108\101\110\32\43\32\49\93\32\61\32\97\10\9\9\110\101\119\80\97\116\104\91\108\101\110\32\43\32\50\93\32\61\32\98\10\10\9\9\114\101\116\117\114\110\32\110\101\119\80\97\116\104\10\9\101\110\100\10\10\10\9\108\111\99\97\108\32\102\117\110\99\116\105\111\110\32\112\114\111\99\101\115\115\82\101\99\117\114\115\105\118\101\40\112\114\111\99\101\115\115\44\10\9\9\105\116\101\109\44\10\9\9\112\97\116\104\44\10\9\9\118\105\115\105\116\101\100\41\10\9\9\105\102\32\105\116\101\109\32\61\61\32\110\105\108\32\116\104\101\110\32\114\101\116\117\114\110\32\110\105\108\32\101\110\100\10\9\9\105\102\32\118\105\115\105\116\101\100\91\105\116\101\109\93\32\116\104\101\110\32\114\101\116\117\114\110\32\118\105\115\105\116\101\100\91\105\116\101\109\93\32\101\110\100\10\10\9\9\108\111\99\97\108\32\112\114\111\99\101\115\115\101\100\32\61\32\112\114\111\99\101\115\115\40\105\116\101\109\44\32\112\97\116\104\41\10\9\9\105\102\32\116\121\112\101\40\112\114\111\99\101\115\115\101\100\41\32\61\61\32"table" then local processedCopy = {} visited[item] = processedCopy local processedKey for k, v in rawpairs(processed) do processedKey = processRecursive(process, k, makePath(path, k, inspect.KEY), visited) if processedKey ~= nil then processedCopy[processedKey] = processRecursive(process, v, makePath(path, processedKey), visited) end end local mt = processRecursive(process, getmetatable(processed), makePath(path, inspect.METATABLE), visited) if type(mt) ~= 'table' then mt = nil end setmetatable(processedCopy, mt) processed = processedCopy end return processed end local function puts(buf, str) buf.n = buf.n + 1 buf[buf.n] = str end local Inspector = {} local Inspector_mt = { __index = Inspector } local function tabify(inspector) puts(inspector.buf, inspector.newline .. rep(inspector.indent, inspector.level)) end function Inspector:getId(v) local id = self.ids[v] local ids = self.ids if not id then local tv = type(v) id = (ids[tv] or 0) + 1 ids[v], ids[tv] = id, id end return tostring(id) end function Inspector:putValue(v) local buf = self.buf local tv = type(v) if tv == 'string' then puts(buf, smartQuote(escape(v))) elseif tv == 'number' or tv == 'boolean' or tv == 'nil' or tv == 'cdata' or tv == 'ctype' then puts(buf, tostring(v)) elseif tv == 'table' and not self.ids[v] then local t = v if t == inspect.KEY or t == inspect.METATABLE then puts(buf, tostring(t)) elseif self.level >= self.depth then puts(buf, '{...}') else if self.cycles[t] > 1 then puts(buf, fmt('<%d>', self:getId(t))) end local keys, keysLen, seqLen = getKeys(t) puts(buf, '{') self.level = self.level + 1 for i = 1, seqLen + keysLen do if i > 1 then puts(buf, ',') end if i <= seqLen then puts(buf, ' ') self:putValue(t[i]) else local k = keys[i - seqLen] tabify(self) if isIdentifier(k) then puts(buf, k) else puts(buf, "["\41\10\9\9\9\9\9\9\9\115\101\108\102\58\112\117\116\86\97\108\117\101\40\107\41\10\9\9\9\9\9\9\9\112\117\116\115\40\98\117\102\44\32"]") end puts(buf, ' = ') self:putValue(t[k]) end end local mt = getmetatable(t) if type(mt) == 'table' then if seqLen + keysLen > 0 then puts(buf, ',') end tabify(self) puts(buf, '<metatable> = ') self:putValue(mt) end self.level = self.level - 1 if keysLen > 0 or type(mt) == 'table' then tabify(self) elseif seqLen > 0 then puts(buf, ' ') end puts(buf, '}') end else puts(buf, fmt('<%s %d>', tv, self:getId(v))) end end function inspect.inspect(root, options) options = options or {} local depth = options.depth or (math.huge) local newline = options.newline or '\n' local indent = options.indent or '  ' local process = options.process if process then root = processRecursive(process, root, {}, {}) end local cycles = {} countCycles(root, cycles) local inspector = setmetatable({ buf = { n = 0 }, ids = {}, cycles = cycles, depth = depth, level = 0, newline = newline, indent = indent, }, Inspector_mt) inspector:putValue(root) return table.concat(inspector.buf) end setmetatable(inspect, { __call = function(_, root, options) return inspect.inspect(root, options) end, }) return inspect end)() local base64 = (function() local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'  local function enc(data) return ((data:gsub('.', function(x)  local r,b='',x:byte() for i=8,1,-1 do r=r..(b%2^i-b%2^(i-1)>0 and '1' or '0') end return r; end)..'0000'):gsub('%d%d%d?%d?%d?%d?', function(x) if (#x < 6) then return '' end local c=0 for i=1,6 do c=c+(x:sub(i,i)=='1' and 2^(6-i) or 0) end return b:sub(c+1,c+1) end)..({ '', '==', '=' })[#data%3+1]) end local function dec(data) data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end return { encode = enc, decode = dec } end)() function deserialize(raw_bytecode, roblox_offset) local settings = fiu.luau_newsettings() if roblox_offset == nil then roblox_offset = true end settings.robloxOffset = roblox_offset settings.vectorCtor = Vector3.new return fiu.luau_deserialize(raw_bytecode, settings) end function toboolean(n) return n ~= 0 end function decompile(bytecode) local encoded = --[[base64.encode(bytecode)]] bytecode local deserialized = deserialize(base64.decode(encoded), true) local code = {"["\32\46\46\32"v"\32\46\46\32\99\32\46\46\32"] = v"\32\46\46\32\97\41\10\9\9\101\108\115\101\105\102\32\111\112\32\61\61\32"GETTABLE"\32\116\104\101\110\10\9\9\9\102\40"local v"\32\46\46\32\97\32\46\46\32" = v"\32\46\46\32\98\32\46\46\32"["\32\46\46\32"v"\32\46\46\32\99\32\46\46\32"]"\41\10\9\9\101\108\115\101\105\102\32\111\112\32\61\61\32"SETTABLEKS"\32\116\104\101\110\10\9\9\9\102\40"v"\32\46\46\32\98\32\46\46\32"["\32\46\46\32\99\111\110\115\116\40\75\41\32\46\46\32"] = v"\32\46\46\32\97\41\10\9\9\101\108\115\101\105\102\32\111\112\32\61\61\32"GETTABLEKS"\32\116\104\101\110\10\9\9\9\102\40"local v"\32\46\46\32\97\32\46\46\32" = v"\32\46\46\32\98\32\46\46\32"["\32\46\46\32\99\111\110\115\116\40\75\41\32\46\46\32"]"\41\10\9\9\101\108\115\101\105\102\32\111\112\32\61\61\32"GETGLOBAL"\32\116\104\101\110\10\9\9\9\102\40"local v"\32\46\46\32\97\32\46\46\32" = _G["\32\46\46\32\99\111\110\115\116\40\75\41\32\46\46\32"]"\41\10\9\9\101\108\115\101\105\102\32\111\112\32\61\61\32"SETGLOBAL"\32\116\104\101\110\10\9\9\9\102\40"_G["\32\46\46\32\99\111\110\115\116\40\75\41\32\46\46\32"] = v"\32\46\46\32\97\41\10\9\9\101\108\115\101\105\102\32\111\112\32\61\61\32"GETTABLEN"\32\116\104\101\110\10\9\9\9\102\40"local v"\32\46\46\32\97\32\46\46\32" = v"\32\46\46\32\98\32\46\46\32"["\32\46\46\32\99\32\46\46\32"]"\41\10\9\9\101\108\115\101\105\102\32\111\112\32\61\61\32"SETTABLEN"\32\116\104\101\110\10\9\9\9\102\40"v"\32\46\46\32\98\32\46\46\32"["\32\46\46\32\99\32\46\46\32"] = v"\32\46\46\32\97\41\10\9\9\101\108\115\101\105\102\32\111\112\32\61\61\32"NEWCLOSURE"\32\116\104\101\110\10\9\9\9\102\40" end return decompile
+local luaParser = loadstring(game:HttpGet("https://raw.githubusercontent.com/ReFreezed/DumbLuaParser/master/dumbParser.lua"))
+
+local fiu = (function()
+	-- // Environment changes in the VM are not supposed to alter the behaviour of the VM so we localise globals beforehand
+	local type = type
+	local pcall = pcall
+	local error = error
+	local tonumber = tonumber
+	local assert = assert
+	local setmetatable = setmetatable
+
+	local string_format = string.format
+
+	local table_move = table.move
+	local table_pack = table.pack
+	local table_unpack = table.unpack
+	local table_create = table.create
+	local table_insert = table.insert
+	local table_remove = table.remove
+
+	local coroutine_create = coroutine.create
+	local coroutine_yield = coroutine.yield
+	local coroutine_resume = coroutine.resume
+	local coroutine_close = coroutine.close
+
+	local buffer_fromstring = buffer.fromstring
+	local buffer_len = buffer.len
+	local buffer_readu8 = buffer.readu8
+	local buffer_readu32 = buffer.readu32
+	local buffer_readstring = buffer.readstring
+	local buffer_readf32 = buffer.readf32
+	local buffer_readf64 = buffer.readf64
+
+	local bit32_bor = bit32.bor
+	local bit32_band = bit32.band
+	local bit32_btest = bit32.btest
+	local bit32_rshift = bit32.rshift
+	local bit32_lshift = bit32.lshift
+	local bit32_extract = bit32.extract
+
+	local ttisnumber = function(v) return type(v) == "number" end
+	local ttisstring = function(v) return type(v) == "string" end
+	local ttisboolean = function(v) return type(v) == "boolean" end
+	local ttisfunction = function(v) return type(v) == "function" end
+
+	-- // opList contains information about the instruction, each instruction is defined in this format:
+	-- // {OP_NAME, OP_MODE, K_MODE, HAS_AUX}
+	-- // OP_MODE specifies what type of registers the instruction uses if any
+	--		0 = NONE
+	--		1 = A
+	--		2 = AB
+	--		3 = ABC
+	--		4 = AD
+	--		5 = AE
+	-- // K_MODE specifies if the instruction has a register that holds a constant table index, which will be directly converted to the constant in the 2nd pass
+	--		0 = NONE
+	--		1 = AUX
+	--		2 = C
+	--		3 = D
+	--		4 = AUX import
+	--		5 = AUX boolean low 1 bit
+	--		6 = AUX number low 24 bits
+	-- // HAS_AUX boolean specifies whether the instruction is followed up with an AUX word, which may be used to execute the instruction.
+
+	local opList = {
+		{ "NOP", 0, 0, false },
+		{ "BREAK", 0, 0, false },
+		{ "LOADNIL", 1, 0, false },
+		{ "LOADB", 3, 0, false },
+		{ "LOADN", 4, 0, false },
+		{ "LOADK", 4, 3, false },
+		{ "MOVE", 2, 0, false },
+		{ "GETGLOBAL", 1, 1, true },
+		{ "SETGLOBAL", 1, 1, true },
+		{ "GETUPVAL", 2, 0, false },
+		{ "SETUPVAL", 2, 0, false },
+		{ "CLOSEUPVALS", 1, 0, false },
+		{ "GETIMPORT", 4, 4, true },
+		{ "GETTABLE", 3, 0, false },
+		{ "SETTABLE", 3, 0, false },
+		{ "GETTABLEKS", 3, 1, true },
+		{ "SETTABLEKS", 3, 1, true },
+		{ "GETTABLEN", 3, 0, false },
+		{ "SETTABLEN", 3, 0, false },
+		{ "NEWCLOSURE", 4, 0, false },
+		{ "NAMECALL", 3, 1, true },
+		{ "CALL", 3, 0, false },
+		{ "RETURN", 2, 0, false },
+		{ "JUMP", 4, 0, false },
+		{ "JUMPBACK", 4, 0, false },
+		{ "JUMPIF", 4, 0, false },
+		{ "JUMPIFNOT", 4, 0, false },
+		{ "JUMPIFEQ", 4, 0, true },
+		{ "JUMPIFLE", 4, 0, true },
+		{ "JUMPIFLT", 4, 0, true },
+		{ "JUMPIFNOTEQ", 4, 0, true },
+		{ "JUMPIFNOTLE", 4, 0, true },
+		{ "JUMPIFNOTLT", 4, 0, true },
+		{ "ADD", 3, 0, false },
+		{ "SUB", 3, 0, false },
+		{ "MUL", 3, 0, false },
+		{ "DIV", 3, 0, false },
+		{ "MOD", 3, 0, false },
+		{ "POW", 3, 0, false },
+		{ "ADDK", 3, 2, false },
+		{ "SUBK", 3, 2, false },
+		{ "MULK", 3, 2, false },
+		{ "DIVK", 3, 2, false },
+		{ "MODK", 3, 2, false },
+		{ "POWK", 3, 2, false },
+		{ "AND", 3, 0, false },
+		{ "OR", 3, 0, false },
+		{ "ANDK", 3, 2, false },
+		{ "ORK", 3, 2, false },
+		{ "CONCAT", 3, 0, false },
+		{ "NOT", 2, 0, false },
+		{ "MINUS", 2, 0, false },
+		{ "LENGTH", 2, 0, false },
+		{ "NEWTABLE", 2, 0, true },
+		{ "DUPTABLE", 4, 3, false },
+		{ "SETLIST", 3, 0, true },
+		{ "FORNPREP", 4, 0, false },
+		{ "FORNLOOP", 4, 0, false },
+		{ "FORGLOOP", 4, 8, true },
+		{ "FORGPREP_INEXT", 4, 0, false },
+		{ "FASTCALL3", 3, 1, true },
+		{ "FORGPREP_NEXT", 4, 0, false },
+		{ "DEP_FORGLOOP_NEXT", 0, 0, false },
+		{ "GETVARARGS", 2, 0, false },
+		{ "DUPCLOSURE", 4, 3, false },
+		{ "PREPVARARGS", 1, 0, false },
+		{ "LOADKX", 1, 1, true },
+		{ "JUMPX", 5, 0, false },
+		{ "FASTCALL", 3, 0, false },
+		{ "COVERAGE", 5, 0, false },
+		{ "CAPTURE", 2, 0, false },
+		{ "SUBRK", 3, 7, false },
+		{ "DIVRK", 3, 7, false },
+		{ "FASTCALL1", 3, 0, false },
+		{ "FASTCALL2", 3, 0, true },
+		{ "FASTCALL2K", 3, 1, true },
+		{ "FORGPREP", 4, 0, false },
+		{ "JUMPXEQKNIL", 4, 5, true },
+		{ "JUMPXEQKB", 4, 5, true },
+		{ "JUMPXEQKN", 4, 6, true },
+		{ "JUMPXEQKS", 4, 6, true },
+		{ "IDIV", 3, 0, false },
+		{ "IDIVK", 3, 2, false },
+	}
+
+	local LUA_MULTRET = -1
+	local LUA_GENERALIZED_TERMINATOR = -2
+
+	local function luau_newsettings()
+		return {
+			vectorCtor = function() error("vectorCtor was not provided") end,
+			vectorSize = 4,
+			useNativeNamecall = false,
+			namecallHandler = function() error("Native __namecall handler was not provided") end,
+			extensions = {},
+			callHooks = {},
+			errorHandling = true,
+			generalizedIteration = true,
+			allowProxyErrors = false,
+			useImportConstants = false,
+			staticEnvironment = {},
+			robloxOffset = false,
+			decodeOp = function(op) return op end
+		}
+	end
+
+	local function luau_validatesettings(luau_settings)
+		assert(type(luau_settings) == "table", "luau_settings should be a table")
+		assert(type(luau_settings.vectorCtor) == "function", "luau_settings.vectorCtor should be a function")
+		assert(type(luau_settings.vectorSize) == "number", "luau_settings.vectorSize should be a number")
+		assert(type(luau_settings.useNativeNamecall) == "boolean", "luau_settings.useNativeNamecall should be a boolean")
+		assert(type(luau_settings.namecallHandler) == "function", "luau_settings.namecallHandler should be a function")
+		assert(type(luau_settings.extensions) == "table", "luau_settings.extensions should be a table of functions")
+		assert(type(luau_settings.callHooks) == "table", "luau_settings.callHooks should be a table of functions")
+		assert(type(luau_settings.errorHandling) == "boolean", "luau_settings.errorHandling should be a boolean")
+		assert(type(luau_settings.generalizedIteration) == "boolean", "luau_settings.generalizedIteration should be a boolean")
+		assert(type(luau_settings.allowProxyErrors) == "boolean", "luau_settings.allowProxyErrors should be a boolean")
+		assert(type(luau_settings.staticEnvironment) == "table", "luau_settings.staticEnvironment should be a table")
+		assert(type(luau_settings.useImportConstants) == "boolean", "luau_settings.useImportConstants should be a boolean")
+		assert(type(luau_settings.decodeOp) == "function", "luau_settings.function should be a function")
+	end
+
+	local function resolveImportConstant(static, count, k0, k1, k2)
+		local res = static[k0]
+		if count < 2 or res == nil then
+			return res
+		end
+		res = res[k1]
+		if count < 3 or res == nil then
+			return res
+		end
+		res = res[k2]
+		return res
+	end
+
+	local function luau_deserialize(bytecode, luau_settings)
+		if luau_settings == nil then
+			luau_settings = luau_newsettings()
+		else 
+			luau_validatesettings(luau_settings)
+		end
+
+		local stream = if type(bytecode) == "string" then buffer_fromstring(bytecode) else bytecode
+		local cursor = 0
+
+		local function readByte()
+			local byte = buffer_readu8(stream, cursor)
+			cursor = cursor + 1
+			return byte
+		end
+
+		local function readWord()
+			local word = buffer_readu32(stream, cursor)
+			cursor = cursor + 4
+			return word
+		end
+
+		local function readFloat()
+			local float = buffer_readf32(stream, cursor)
+			cursor = cursor + 4
+			return float
+		end
+
+		local function readDouble()
+			local double = buffer_readf64(stream, cursor)
+			cursor = cursor + 8
+			return double
+		end
+
+		local function readVarInt()
+			local result = 0
+
+			for i = 0, 4 do
+				local value = readByte()
+				result = bit32_bor(result, bit32_lshift(bit32_band(value, 0x7F), i * 7))
+				if not bit32_btest(value, 0x80) then
+					break
+				end
+			end
+
+			return result
+		end
+
+		local function readString()
+			local size = readVarInt()
+
+			if size == 0 then
+				return ""
+			else
+				local str = buffer_readstring(stream, cursor, size)
+				cursor = cursor + size
+
+				return str
+			end
+		end
+
+		local luauVersion = readByte()
+		local typesVersion = 0
+		if luauVersion == 0 then
+			error("the provided bytecode is an error message",0)
+		elseif luauVersion < 3 or luauVersion > 6 then
+			error("the version of the provided bytecode is unsupported",0)
+		elseif luauVersion >= 4 then
+			typesVersion = readByte()
+		end
+
+		local stringCount = readVarInt()
+		local stringList = table_create(stringCount)
+
+		for i = 1, stringCount do
+			stringList[i] = readString()
+		end
+
+		local function readInstruction(codeList)
+			local value = luau_settings.decodeOp(readWord())
+			local opcode = bit32_band(value, 0xFF)
+			if luau_settings.robloxOffset then
+				opcode = (opcode * 203) % 256
+			end
+
+			local opinfo = opList[opcode + 1]
+			local opname = opinfo[1]
+			local opmode = opinfo[2]
+			local kmode = opinfo[3]
+			local usesAux = opinfo[4]
+
+			local inst = {
+				opcode = opcode;
+				opname = opname;
+				opmode = opmode;
+				kmode = kmode;
+				usesAux = usesAux;
+			}
+
+			table_insert(codeList, inst)
+
+			if opmode == 1 then --[[ A ]]
+				inst.A = bit32_band(bit32_rshift(value, 8), 0xFF)
+			elseif opmode == 2 then --[[ AB ]]
+				inst.A = bit32_band(bit32_rshift(value, 8), 0xFF)
+				inst.B = bit32_band(bit32_rshift(value, 16), 0xFF)
+			elseif opmode == 3 then --[[ ABC ]]
+				inst.A = bit32_band(bit32_rshift(value, 8), 0xFF)
+				inst.B = bit32_band(bit32_rshift(value, 16), 0xFF)
+				inst.C = bit32_band(bit32_rshift(value, 24), 0xFF)
+			elseif opmode == 4 then --[[ AD ]]
+				inst.A = bit32_band(bit32_rshift(value, 8), 0xFF)
+				local temp = bit32_band(bit32_rshift(value, 16), 0xFFFF)
+				inst.D = if temp < 0x8000 then temp else temp - 0x10000
+			elseif opmode == 5 then --[[ AE ]]
+				local temp = bit32_band(bit32_rshift(value, 8), 0xFFFFFF)
+				inst.E = if temp < 0x800000 then temp else temp - 0x1000000
+			end
+
+			if usesAux then 
+				local aux = readWord()
+				inst.aux = aux
+
+				table_insert(codeList, {value = aux, opname = "auxvalue" })
+			end
+
+			return usesAux
+		end
+
+		local function checkkmode(inst, k)
+			local kmode = inst.kmode
+
+			if kmode == 1 then --// AUX
+				inst.K = k[inst.aux +  1]
+			elseif kmode == 2 then --// C
+				inst.K = k[inst.C + 1]
+			elseif kmode == 3 then--// D
+				inst.K = k[inst.D + 1]
+			elseif kmode == 4 then --// AUX import
+				local extend = inst.aux
+				local count = bit32_rshift(extend, 30)
+				local id0 = bit32_band(bit32_rshift(extend, 20), 0x3FF)
+
+				inst.K0 = k[id0 + 1]
+				inst.KC = count
+				if count == 2 then
+					local id1 = bit32_band(bit32_rshift(extend, 10), 0x3FF)
+
+					inst.K1 = k[id1 + 1]
+				elseif count == 3 then
+					local id1 = bit32_band(bit32_rshift(extend, 10), 0x3FF)
+					local id2 = bit32_band(bit32_rshift(extend, 0), 0x3FF)
+
+					inst.K1 = k[id1 + 1]
+					inst.K2 = k[id2 + 1]
+				end
+				if luau_settings.useImportConstants then
+					inst.K = resolveImportConstant(
+						luau_settings.staticEnvironment,
+						count, inst.K0, inst.K1, inst.K2
+					)
+				end
+			elseif kmode == 5 then --// AUX boolean low 1 bit
+				inst.K = bit32_extract(inst.aux, 0, 1) == 1
+				inst.KN = bit32_extract(inst.aux, 31, 1) == 1
+			elseif kmode == 6 then --// AUX number low 24 bits
+				inst.K = k[bit32_extract(inst.aux, 0, 24) + 1]
+				inst.KN = bit32_extract(inst.aux, 31, 1) == 1
+			elseif kmode == 7 then --// B
+				inst.K = k[inst.B + 1]
+			elseif kmode == 8 then --// AUX number low 16 bits
+				inst.K = bit32_band(inst.aux, 0xf)
+			end
+		end
+
+		local function readProto(bytecodeid)
+			local maxstacksize = readByte()
+			local numparams = readByte()
+			local nups = readByte()
+			local isvararg = readByte() ~= 0
+
+			if luauVersion >= 4 then
+				readByte() --// flags 
+				local typesize = readVarInt();
+				cursor = cursor + typesize;
+			end
+
+			local sizecode = readVarInt()
+			local codelist = table_create(sizecode)
+
+			local skipnext = false 
+			for i = 1, sizecode do
+				if skipnext then 
+					skipnext = false
+					continue 
+				end
+
+				skipnext = readInstruction(codelist)
+			end
+
+			local debugcodelist = table_create(sizecode) 
+			for i = 1, sizecode do 
+				debugcodelist[i] = codelist[i].opcode
+			end 
+
+			local sizek = readVarInt()
+			local klist = table_create(sizek)
+
+			for i = 1, sizek do
+				local kt = readByte()
+				local k
+
+				if kt == 0 then --// Nil
+					k = nil
+				elseif kt == 1 then --// Bool
+					k = readByte() ~= 0
+				elseif kt == 2 then --// Number
+					k = readDouble()
+				elseif kt == 3 then --// String
+					k = stringList[readVarInt()]
+				elseif kt == 4 then --// Import
+					k = readWord()
+				elseif kt == 5 then --// Table
+					local dataLength = readVarInt()
+					k = table_create(dataLength)
+
+					for i = 1, dataLength do
+						k[i] = readVarInt()
+					end
+				elseif kt == 6 then --// Closure
+					k = readVarInt()
+				elseif kt == 7 then --// Vector
+					local x,y,z,w = readFloat(), readFloat(), readFloat(), readFloat()
+
+					if luau_settings.vectorSize == 4 then
+						k = luau_settings.vectorCtor(x,y,z,w)
+					else 
+						k = luau_settings.vectorCtor(x,y,z)
+					end
+				end
+
+				klist[i] = k
+			end
+
+			-- // 2nd pass to replace constant references in the instruction
+			for i = 1, sizecode do
+				checkkmode(codelist[i], klist)
+			end
+
+			local sizep = readVarInt()
+			local protolist = table_create(sizep)
+
+			for i = 1, sizep do
+				protolist[i] = readVarInt() + 1
+			end
+
+			local linedefined = readVarInt()
+
+			local debugnameindex = readVarInt()
+			local debugname 
+
+			if debugnameindex ~= 0 then
+				debugname = stringList[debugnameindex]
+			else 
+				debugname = "(??)"
+			end
+
+			-- // lineinfo
+			local lineinfoenabled = readByte() ~= 0
+			local instructionlineinfo = nil 
+
+			if lineinfoenabled then
+				local linegaplog2 = readByte()
+
+				local intervals = bit32_rshift((sizecode - 1), linegaplog2) + 1
+
+				local lineinfo = table_create(sizecode)
+				local abslineinfo = table_create(intervals)
+
+				local lastoffset = 0
+				for j = 1, sizecode do
+					lastoffset += readByte()
+					lineinfo[j] = lastoffset
+				end
+
+				local lastline = 0
+				for j = 1, intervals do
+					lastline += readWord()
+					abslineinfo[j] = lastline % (2 ^ 32)
+				end
+
+				instructionlineinfo = table_create(sizecode)
+
+				for i = 1, sizecode do 
+					--// p->abslineinfo[pc >> p->linegaplog2] + p->lineinfo[pc];
+					table_insert(instructionlineinfo, abslineinfo[bit32_rshift(i - 1, linegaplog2) + 1] + lineinfo[i])
+				end
+			end
+
+			-- // debuginfo
+			if readByte() ~= 0 then
+				local sizel = readVarInt()
+				for i = 1, sizel do
+					readVarInt()
+					readVarInt()
+					readVarInt()
+					readByte()
+				end
+				local sizeupvalues = readVarInt()
+				for i = 1, sizeupvalues do
+					readVarInt()
+				end
+			end
+
+			return {
+				maxstacksize = maxstacksize;
+				numparams = numparams;
+				nups = nups;
+				isvararg = isvararg;
+				linedefined = linedefined;
+				debugname = debugname;
+
+				sizecode = sizecode;
+				code = codelist;
+				debugcode = debugcodelist;
+
+				sizek = sizek;
+				k = klist;
+
+				sizep = sizep;
+				protos = protolist;
+
+				lineinfoenabled = lineinfoenabled;
+				instructionlineinfo = instructionlineinfo;
+
+				bytecodeid = bytecodeid;
+			}
+		end
+
+		-- userdataRemapping (not used in VM, left unused)
+		if typesVersion == 3 then
+			local index = readByte()
+
+			while index ~= 0 do
+				readVarInt()
+
+				index = readByte()
+			end
+		end
+
+		local protoCount = readVarInt()
+		local protoList = table_create(protoCount)
+
+		for i = 1, protoCount do
+			protoList[i] = readProto(i - 1)
+		end
+
+		local mainProto = protoList[readVarInt() + 1]
+
+		assert(cursor == buffer_len(stream), "deserializer cursor position mismatch")
+
+		mainProto.debugname = "(main)"
+
+		return {
+			stringList = stringList;
+			protoList = protoList;
+
+			mainProto = mainProto;
+
+			typesVersion = typesVersion;
+		}
+	end
+
+	local function luau_load(module, env, luau_settings)
+		if luau_settings == nil then
+			luau_settings = luau_newsettings()
+		else 
+			luau_validatesettings(luau_settings)
+		end
+
+		if type(module) ~= "table" then
+			module = luau_deserialize(module, luau_settings)
+		end
+
+		local protolist = module.protoList
+		local mainProto = module.mainProto
+
+		local breakHook = luau_settings.callHooks.breakHook
+		local stepHook = luau_settings.callHooks.stepHook
+		local interruptHook = luau_settings.callHooks.interruptHook
+		local panicHook = luau_settings.callHooks.panicHook
+
+		local alive = true 
+
+		local function luau_close()
+			alive = false
+		end
+
+		local function luau_wrapclosure(module, proto, upvals)
+			local function luau_execute(...)
+				local debugging, stack, protos, code, varargs
+
+				if luau_settings.errorHandling then
+					debugging, stack, protos, code, varargs = ... 
+				else 
+					--// Copied from error handling wrapper
+					local passed = table_pack(...)
+					stack = table_create(proto.maxstacksize)
+					varargs = {
+						len = 0,
+						list = {},
+					}
+
+					table_move(passed, 1, proto.numparams, 0, stack)
+
+					if proto.numparams < passed.n then
+						local start = proto.numparams + 1
+						local len = passed.n - proto.numparams
+						varargs.len = len
+						table_move(passed, start, start + len - 1, 1, varargs.list)
+					end
+
+					passed = nil
+
+					debugging = {pc = 0, name = "NONE"}
+
+					protos = proto.protos 
+					code = proto.code
+				end 
+
+				local top, pc, open_upvalues, generalized_iterators = -1, 1, setmetatable({}, {__mode = "vs"}), setmetatable({}, {__mode = "ks"})
+				local constants = proto.k
+				local debugopcodes = proto.debugcode
+				local extensions = luau_settings.extensions
+
+				local handlingBreak = false
+				local inst, op
+				while alive do
+					if not handlingBreak then
+						inst = code[pc]
+						op = inst.opcode
+					end
+
+					handlingBreak = false
+
+					debugging.pc = pc
+					debugging.top = top
+					debugging.name = inst.opname
+
+					pc += 1
+
+					if stepHook then
+						stepHook(stack, debugging, proto, module, upvals)
+					end
+
+					if op == 0 then --[[ NOP ]]
+						--// Do nothing
+					elseif op == 1 then --[[ BREAK ]]
+						if breakHook then
+							local results = table.pack(breakHook(stack, debugging, proto, module, upvals))
+
+							if results[1] then 
+								return table_unpack(results, 2, #results)
+							end 
+						end
+
+						pc -= 1
+						op = debugopcodes[pc]
+						handlingBreak = true
+					elseif op == 2 then --[[ LOADNIL ]]
+						stack[inst.A] = nil
+					elseif op == 3 then --[[ LOADB ]]
+						stack[inst.A] = inst.B == 1
+						pc += inst.C
+					elseif op == 4 then --[[ LOADN ]]
+						stack[inst.A] = inst.D
+					elseif op == 5 then --[[ LOADK ]]
+						stack[inst.A] = inst.K
+					elseif op == 6 then --[[ MOVE ]]
+						stack[inst.A] = stack[inst.B]
+					elseif op == 7 then --[[ GETGLOBAL ]]
+						local kv = inst.K
+
+						stack[inst.A] = extensions[kv] or env[kv]
+
+						pc += 1 --// adjust for aux
+					elseif op == 8 then --[[ SETGLOBAL ]]
+						local kv = inst.K
+						env[kv] = stack[inst.A]
+
+						pc += 1 --// adjust for aux
+					elseif op == 9 then --[[ GETUPVAL ]]
+						local uv = upvals[inst.B + 1]
+						stack[inst.A] = uv.store[uv.index]
+					elseif op == 10 then --[[ SETUPVAL ]]
+						local uv = upvals[inst.B + 1]
+						uv.store[uv.index] = stack[inst.A]
+					elseif op == 11 then --[[ CLOSEUPVALS ]]
+						for i, uv in open_upvalues do
+							if uv.index >= inst.A then
+								uv.value = uv.store[uv.index]
+								uv.store = uv
+								uv.index = "value" --// self reference
+								open_upvalues[i] = nil
+							end
+						end
+					elseif op == 12 then --[[ GETIMPORT ]]
+						if luau_settings.useImportConstants then
+							stack[inst.A] = inst.K
+						else
+							local count = inst.KC
+							local k0 = inst.K0
+							local import = extensions[k0] or env[k0]
+							if count == 1 then
+								stack[inst.A] = import
+							elseif count == 2 then
+								stack[inst.A] = import[inst.K1]
+							elseif count == 3 then
+								stack[inst.A] = import[inst.K1][inst.K2]
+							end
+						end
+
+						pc += 1 --// adjust for aux 
+					elseif op == 13 then --[[ GETTABLE ]]
+						stack[inst.A] = stack[inst.B][stack[inst.C]]
+					elseif op == 14 then --[[ SETTABLE ]]
+						stack[inst.B][stack[inst.C]] = stack[inst.A]
+					elseif op == 15 then --[[ GETTABLEKS ]]
+						local index = inst.K
+						stack[inst.A] = stack[inst.B][index]
+
+						pc += 1 --// adjust for aux 
+					elseif op == 16 then --[[ SETTABLEKS ]]
+						local index = inst.K
+						stack[inst.B][index] = stack[inst.A]
+
+						pc += 1 --// adjust for aux
+					elseif op == 17 then --[[ GETTABLEN ]]
+						stack[inst.A] = stack[inst.B][inst.C + 1]
+					elseif op == 18 then --[[ SETTABLEN ]]
+						stack[inst.B][inst.C + 1] = stack[inst.A]
+					elseif op == 19 then --[[ NEWCLOSURE ]]
+						local newPrototype = protolist[protos[inst.D + 1]]
+
+						local nups = newPrototype.nups
+						local upvalues = table_create(nups)
+						stack[inst.A] = luau_wrapclosure(module, newPrototype, upvalues)
+
+						for i = 1, nups do
+							local pseudo = code[pc]
+
+							pc += 1
+
+							local type = pseudo.A
+
+							if type == 0 then --// value
+								local upvalue = {
+									value = stack[pseudo.B],
+									index = "value",--// self reference
+								}
+								upvalue.store = upvalue
+
+								upvalues[i] = upvalue
+							elseif type == 1 then --// reference
+								local index = pseudo.B
+								local prev = open_upvalues[index]
+
+								if prev == nil then
+									prev = {
+										index = index,
+										store = stack,
+									}
+									open_upvalues[index] = prev
+								end
+
+								upvalues[i] = prev
+							elseif type == 2 then --// upvalue
+								upvalues[i] = upvals[pseudo.B + 1]
+							end
+						end
+					elseif op == 20 then --[[ NAMECALL ]]
+						local A = inst.A
+						local B = inst.B
+
+						local kv = inst.K
+
+						local sb = stack[B]
+
+						stack[A + 1] = sb
+
+						pc += 1 --// adjust for aux 
+
+						local useFallback = true
+
+						--// Special handling for native namecall behaviour
+						local useNativeHandler = luau_settings.useNativeNamecall
+
+						if useNativeHandler then
+							local nativeNamecall = luau_settings.namecallHandler
+
+							local callInst = code[pc]
+							local callOp = callInst.opcode
+
+							--// Copied from the CALL handler under
+							local callA, callB, callC = callInst.A, callInst.B, callInst.C
+
+							if stepHook then
+								stepHook(stack, debugging, proto, module, upvals)
+							end
+
+							if interruptHook then
+								interruptHook(stack, debugging, proto, module, upvals)	
+							end
+
+							local params = if callB == 0 then top - callA else callB - 1
+							local ret_list = table_pack(
+								nativeNamecall(kv, table_unpack(stack, callA + 1, callA + params))
+							)
+
+							if ret_list[1] == true then
+								useFallback = false
+
+								pc += 1 --// Skip next CALL instruction
+
+								inst = callInst
+								op = callOp
+								debugging.pc = pc
+								debugging.name = inst.opname
+
+								table_remove(ret_list, 1)
+
+								local ret_num = ret_list.n - 1
+
+								if callC == 0 then
+									top = callA + ret_num - 1
+								else
+									ret_num = callC - 1
+								end
+
+								table_move(ret_list, 1, ret_num, callA, stack)
+							end
+						end
+
+						if useFallback then
+							stack[A] = sb[kv]
+						end
+					elseif op == 21 then --[[ CALL ]]
+						if interruptHook then
+							interruptHook(stack, debugging, proto, module, upvals)	
+						end
+
+						local A, B, C = inst.A, inst.B, inst.C
+
+						local params = if B == 0 then top - A else B - 1
+						local func = stack[A]
+						local ret_list = table_pack(
+							func(table_unpack(stack, A + 1, A + params))
+						)
+
+						local ret_num = ret_list.n
+
+						if C == 0 then
+							top = A + ret_num - 1
+						else
+							ret_num = C - 1
+						end
+
+						table_move(ret_list, 1, ret_num, A, stack)
+					elseif op == 22 then --[[ RETURN ]]
+						if interruptHook then
+							interruptHook(stack, debugging, proto, module, upvals)	
+						end
+
+						local A = inst.A
+						local B = inst.B 
+						local b = B - 1
+						local nresults
+
+						if b == LUA_MULTRET then
+							nresults = top - A + 1
+						else
+							nresults = B - 1
+						end
+
+						return table_unpack(stack, A, A + nresults - 1)
+					elseif op == 23 then --[[ JUMP ]]
+						pc += inst.D
+					elseif op == 24 then --[[ JUMPBACK ]]
+						if interruptHook then
+							interruptHook(stack, debugging, proto, module, upvals)	
+						end
+
+						pc += inst.D
+					elseif op == 25 then --[[ JUMPIF ]]
+						if stack[inst.A] then
+							pc += inst.D
+						end
+					elseif op == 26 then --[[ JUMPIFNOT ]]
+						if not stack[inst.A] then
+							pc += inst.D
+						end
+					elseif op == 27 then --[[ JUMPIFEQ ]]
+						if stack[inst.A] == stack[inst.aux] then
+							pc += inst.D
+						else
+							pc += 1
+						end
+					elseif op == 28 then --[[ JUMPIFLE ]]
+						if stack[inst.A] <= stack[inst.aux] then
+							pc += inst.D
+						else
+							pc += 1
+						end
+					elseif op == 29 then --[[ JUMPIFLT ]]
+						if stack[inst.A] < stack[inst.aux] then
+							pc += inst.D
+						else
+							pc += 1
+						end
+					elseif op == 30 then --[[ JUMPIFNOTEQ ]]
+						if stack[inst.A] == stack[inst.aux] then
+							pc += 1
+						else
+							pc += inst.D
+						end
+					elseif op == 31 then --[[ JUMPIFNOTLE ]]
+						if stack[inst.A] <= stack[inst.aux] then
+							pc += 1
+						else
+							pc += inst.D
+						end
+					elseif op == 32 then --[[ JUMPIFNOTLT ]]
+						if stack[inst.A] < stack[inst.aux] then
+							pc += 1
+						else
+							pc += inst.D
+						end
+					elseif op == 33 then --[[ ADD ]]
+						stack[inst.A] = stack[inst.B] + stack[inst.C]
+					elseif op == 34 then --[[ SUB ]]
+						stack[inst.A] = stack[inst.B] - stack[inst.C]
+					elseif op == 35 then --[[ MUL ]]
+						stack[inst.A] = stack[inst.B] * stack[inst.C]
+					elseif op == 36 then --[[ DIV ]]
+						stack[inst.A] = stack[inst.B] / stack[inst.C]
+					elseif op == 37 then --[[ MOD ]]
+						stack[inst.A] = stack[inst.B] % stack[inst.C]
+					elseif op == 38 then --[[ POW ]]
+						stack[inst.A] = stack[inst.B] ^ stack[inst.C]
+					elseif op == 39 then --[[ ADDK ]]
+						stack[inst.A] = stack[inst.B] + inst.K
+					elseif op == 40 then --[[ SUBK ]]
+						stack[inst.A] = stack[inst.B] - inst.K
+					elseif op == 41 then --[[ MULK ]]
+						stack[inst.A] = stack[inst.B] * inst.K
+					elseif op == 42 then --[[ DIVK ]]
+						stack[inst.A] = stack[inst.B] / inst.K
+					elseif op == 43 then --[[ MODK ]]
+						stack[inst.A] = stack[inst.B] % inst.K
+					elseif op == 44 then --[[ POWK ]]
+						stack[inst.A] = stack[inst.B] ^ inst.K
+					elseif op == 45 then --[[ AND ]]
+						local value = stack[inst.B]
+						stack[inst.A] = if value then stack[inst.C] or false else value
+					elseif op == 46 then --[[ OR ]]
+						local value = stack[inst.B]
+						stack[inst.A] = if value then value else stack[inst.C] or false
+					elseif op == 47 then --[[ ANDK ]]
+						local value = stack[inst.B]
+						stack[inst.A] = if value then inst.K or false else value
+					elseif op == 48 then --[[ ORK ]]
+						local value = stack[inst.B]
+						stack[inst.A] = if value then value else inst.K or false
+					elseif op == 49 then --[[ CONCAT ]]
+						local s = ""
+						for i = inst.B, inst.C do
+							s ..= stack[i]
+						end
+						stack[inst.A] = s
+					elseif op == 50 then --[[ NOT ]]
+						stack[inst.A] = not stack[inst.B]
+					elseif op == 51 then --[[ MINUS ]]
+						stack[inst.A] = -stack[inst.B]
+					elseif op == 52 then --[[ LENGTH ]]
+						stack[inst.A] = #stack[inst.B]
+					elseif op == 53 then --[[ NEWTABLE ]]
+						stack[inst.A] = table_create(inst.aux)
+
+						pc += 1 --// adjust for aux 
+					elseif op == 54 then --[[ DUPTABLE ]]
+						local template = inst.K
+						local serialized = {}
+						for _, id in template do
+							serialized[constants[id + 1]] = nil
+						end
+						stack[inst.A] = serialized
+					elseif op == 55 then --[[ SETLIST ]]
+						local A = inst.A
+						local B = inst.B
+						local c = inst.C - 1
+
+						if c == LUA_MULTRET then
+							c = top - B + 1
+						end
+
+						table_move(stack, B, B + c - 1, inst.aux, stack[A])
+
+						pc += 1 --// adjust for aux 
+					elseif op == 56 then --[[ FORNPREP ]]
+						local A = inst.A
+
+						local limit = stack[A]
+						if not ttisnumber(limit) then
+							local number = tonumber(limit)
+
+							if number == nil then
+								error("invalid 'for' limit (number expected)")
+							end
+
+							stack[A] = number
+							limit = number
+						end
+
+						local step = stack[A + 1]
+						if not ttisnumber(step) then
+							local number = tonumber(step)
+
+							if number == nil then
+								error("invalid 'for' step (number expected)")
+							end
+
+							stack[A + 1] = number
+							step = number
+						end
+
+						local index = stack[A + 2]
+						if not ttisnumber(index) then
+							local number = tonumber(index)
+
+							if number == nil then
+								error("invalid 'for' index (number expected)")
+							end
+
+							stack[A + 2] = number
+							index = number
+						end
+
+						if step > 0 then
+							if not (index <= limit) then
+								pc += inst.D
+							end
+						else
+							if not (limit <= index) then
+								pc += inst.D
+							end
+						end
+					elseif op == 57 then --[[ FORNLOOP ]]
+						if interruptHook then
+							interruptHook(stack, debugging, proto, module, upvals)	
+						end
+
+						local A = inst.A
+						local limit = stack[A]
+						local step = stack[A + 1]
+						local index = stack[A + 2] + step
+
+						stack[A + 2] = index
+
+						if step > 0 then
+							if index <= limit then
+								pc += inst.D
+							end
+						else
+							if limit <= index then
+								pc += inst.D
+							end
+						end
+					elseif op == 58 then --[[ FORGLOOP ]]
+						if interruptHook then
+							interruptHook(stack, debugging, proto, module, upvals)	
+						end
+
+						local A = inst.A
+						local res = inst.K
+
+						top = A + 6
+
+						local it = stack[A]
+
+						if (luau_settings.generalizedIteration == false) or ttisfunction(it) then 
+							local vals = { it(stack[A + 1], stack[A + 2]) }
+							table_move(vals, 1, res, A + 3, stack)
+
+							if stack[A + 3] ~= nil then
+								stack[A + 2] = stack[A + 3]
+								pc += inst.D
+							else
+								pc += 1
+							end
+						else
+							local ok, vals = coroutine_resume(generalized_iterators[inst], it, stack[A + 1], stack[A + 2])
+							if not ok then
+								error(vals)
+							end
+							if vals == LUA_GENERALIZED_TERMINATOR then 
+								generalized_iterators[inst] = nil
+								pc += 1
+							else
+								table_move(vals, 1, res, A + 3, stack)
+
+								stack[A + 2] = stack[A + 3]
+								pc += inst.D
+							end
+						end
+					elseif op == 59 then --[[ FORGPREP_INEXT ]]
+						if not ttisfunction(stack[inst.A]) then
+							error(string_format("attempt to iterate over a %s value", type(stack[inst.A]))) -- FORGPREP_INEXT encountered non-function value
+						end
+
+						pc += inst.D
+					elseif op == 60 then --[[ FASTCALL3 ]]
+						--[[ Skipped ]]
+						pc += 1 --// adjust for aux
+					elseif op == 61 then --[[ FORGPREP_NEXT ]]
+						if not ttisfunction(stack[inst.A]) then
+							error(string_format("attempt to iterate over a %s value", type(stack[inst.A]))) -- FORGPREP_NEXT encountered non-function value
+						end
+
+						pc += inst.D
+					elseif op == 63 then --[[ GETVARARGS ]]
+						local A = inst.A
+						local b = inst.B - 1
+
+						if b == LUA_MULTRET then
+							b = varargs.len
+							top = A + b - 1
+						end
+
+						table_move(varargs.list, 1, b, A, stack)
+					elseif op == 64 then --[[ DUPCLOSURE ]]
+						local newPrototype = protolist[inst.K + 1] --// correct behavior would be to reuse the prototype if possible but it would not be useful here
+
+						local nups = newPrototype.nups
+						local upvalues = table_create(nups)
+						stack[inst.A] = luau_wrapclosure(module, newPrototype, upvalues)
+
+						for i = 1, nups do
+							local pseudo = code[pc]
+							pc += 1
+
+							local type = pseudo.A
+							if type == 0 then --// value
+								local upvalue = {
+									value = stack[pseudo.B],
+									index = "value",--// self reference
+								}
+								upvalue.store = upvalue
+
+								upvalues[i] = upvalue
+
+								--// references dont get handled by DUPCLOSURE
+							elseif type == 2 then --// upvalue
+								upvalues[i] = upvals[pseudo.B + 1]
+							end
+						end
+					elseif op == 65 then --[[ PREPVARARGS ]]
+						--[[ Handled by wrapper ]]
+					elseif op == 66 then --[[ LOADKX ]]
+						local kv = inst.K
+						stack[inst.A] = kv
+
+						pc += 1 --// adjust for aux 
+					elseif op == 67 then --[[ JUMPX ]]
+						if interruptHook then
+							interruptHook(stack, debugging, proto, module, upvals)	
+						end
+
+						pc += inst.E
+					elseif op == 68 then --[[ FASTCALL ]]
+						--[[ Skipped ]]
+					elseif op == 69 then --[[ COVERAGE ]]
+						inst.E += 1
+					elseif op == 70 then --[[ CAPTURE ]]
+						--[[ Handled by CLOSURE ]]
+						error("encountered unhandled CAPTURE")
+					elseif op == 71 then --[[ SUBRK ]]
+						stack[inst.A] = inst.K - stack[inst.C]
+					elseif op == 72 then --[[ DIVRK ]]
+						stack[inst.A] = inst.K / stack[inst.C]
+					elseif op == 73 then --[[ FASTCALL1 ]]
+						--[[ Skipped ]]
+					elseif op == 74 then --[[ FASTCALL2 ]]
+						--[[ Skipped ]]
+						pc += 1 --// adjust for aux
+					elseif op == 75 then --[[ FASTCALL2K ]]
+						--[[ Skipped ]]
+						pc += 1 --// adjust for aux
+					elseif op == 76 then --[[ FORGPREP ]]
+						local iterator = stack[inst.A]
+
+						if luau_settings.generalizedIteration and not ttisfunction(iterator) then
+							local loopInstruction = code[pc + inst.D]
+							if generalized_iterators[loopInstruction] == nil then 
+								local function gen_iterator(...)
+									for r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36, r37, r38, r39, r40, r41, r42, r43, r44, r45, r46, r47, r48, r49, r50, r51, r52, r53, r54, r55, r56, r57, r58, r59, r60, r61, r62, r63, r64, r65, r66, r67, r68, r69, r70, r71, r72, r73, r74, r75, r76, r77, r78, r79, r80, r81, r82, r83, r84, r85, r86, r87, r88, r89, r90, r91, r92, r93, r94, r95, r96, r97, r98, r99, r100, r101, r102, r103, r104, r105, r106, r107, r108, r109, r110, r111, r112, r113, r114, r115, r116, r117, r118, r119, r120, r121, r122, r123, r124, r125, r126, r127, r128, r129, r130, r131, r132, r133, r134, r135, r136, r137, r138, r139, r140, r141, r142, r143, r144, r145, r146, r147, r148, r149, r150, r151, r152, r153, r154, r155, r156, r157, r158, r159, r160, r161, r162, r163, r164, r165, r166, r167, r168, r169, r170, r171, r172, r173, r174, r175, r176, r177, r178, r179, r180, r181, r182, r183, r184, r185, r186, r187, r188, r189, r190, r191, r192, r193, r194, r195, r196, r197, r198, r199, r200 in ... do 
+										coroutine_yield({r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36, r37, r38, r39, r40, r41, r42, r43, r44, r45, r46, r47, r48, r49, r50, r51, r52, r53, r54, r55, r56, r57, r58, r59, r60, r61, r62, r63, r64, r65, r66, r67, r68, r69, r70, r71, r72, r73, r74, r75, r76, r77, r78, r79, r80, r81, r82, r83, r84, r85, r86, r87, r88, r89, r90, r91, r92, r93, r94, r95, r96, r97, r98, r99, r100, r101, r102, r103, r104, r105, r106, r107, r108, r109, r110, r111, r112, r113, r114, r115, r116, r117, r118, r119, r120, r121, r122, r123, r124, r125, r126, r127, r128, r129, r130, r131, r132, r133, r134, r135, r136, r137, r138, r139, r140, r141, r142, r143, r144, r145, r146, r147, r148, r149, r150, r151, r152, r153, r154, r155, r156, r157, r158, r159, r160, r161, r162, r163, r164, r165, r166, r167, r168, r169, r170, r171, r172, r173, r174, r175, r176, r177, r178, r179, r180, r181, r182, r183, r184, r185, r186, r187, r188, r189, r190, r191, r192, r193, r194, r195, r196, r197, r198, r199, r200})
+									end
+
+									coroutine_yield(LUA_GENERALIZED_TERMINATOR)
+								end
+
+								generalized_iterators[loopInstruction] = coroutine_create(gen_iterator)
+							end
+						end
+
+						pc += inst.D
+					elseif op == 77 then --[[ JUMPXEQKNIL ]]
+						local kn = inst.KN
+
+						if (stack[inst.A] == nil) ~= kn then
+							pc += inst.D
+						else
+							pc += 1
+						end
+					elseif op == 78 then --[[ JUMPXEQKB ]]
+						local kv = inst.K
+						local kn = inst.KN
+						local ra = stack[inst.A]
+
+						if (ttisboolean(ra) and (ra == kv)) ~= kn then
+							pc += inst.D
+						else
+							pc += 1
+						end
+					elseif op == 79 then --[[ JUMPXEQKN ]]
+						local kv = inst.K
+						local kn = inst.KN
+						local ra = stack[inst.A]
+
+						if (ra == kv) ~= kn then
+							pc += inst.D
+						else
+							pc += 1
+						end
+					elseif op == 80 then --[[ JUMPXEQKS ]]
+						local kv = inst.K
+						local kn = inst.KN
+						local ra = stack[inst.A]
+
+						if (ra == kv) ~= kn then
+							pc += inst.D
+						else
+							pc += 1
+						end
+					elseif op == 81 then --[[ IDIV ]]
+						stack[inst.A] = stack[inst.B] // stack[inst.C]
+					elseif op == 82 then --[[ IDIVK ]]
+						stack[inst.A] = stack[inst.B] // inst.K
+					else
+						error("Unsupported Opcode: " .. inst.opname .. " op: " .. op)
+					end
+				end
+
+				for i, uv in open_upvalues do
+					uv.value = uv.store[uv.index]
+					uv.store = uv
+					uv.index = "value" --// self reference
+					open_upvalues[i] = nil
+				end
+
+				for i, iter in generalized_iterators do 
+					coroutine_close(iter)
+					generalized_iterators[i] = nil
+				end
+			end
+
+			local function wrapped(...)
+				local passed = table_pack(...)
+				local stack = table_create(proto.maxstacksize)
+				local varargs = {
+					len = 0,
+					list = {},
+				}
+
+				table_move(passed, 1, proto.numparams, 0, stack)
+
+				if proto.numparams < passed.n then
+					local start = proto.numparams + 1
+					local len = passed.n - proto.numparams
+					varargs.len = len
+					table_move(passed, start, start + len - 1, 1, varargs.list)
+				end
+
+				passed = nil
+
+				local debugging = {pc = 0, name = "NONE"}
+				local result
+				if luau_settings.errorHandling then 
+					result = table_pack(pcall(luau_execute, debugging, stack, proto.protos, proto.code, varargs))
+				else
+					result = table_pack(true, luau_execute(debugging, stack, proto.protos, proto.code, varargs))
+				end
+
+				if result[1] then
+					return table_unpack(result, 2, result.n)
+				else
+					local message = result[2]
+
+					if panicHook then
+						panicHook(message, stack, debugging, proto, module, upvals)
+					end
+
+					if ttisstring(message) == false then
+						if luau_settings.allowProxyErrors then
+							error(message)
+						else 
+							message = type(message)
+						end
+					end
+
+					if proto.lineinfoenabled then
+						return error(string_format("Fiu VM Error { Name: %s Line: %s PC: %s Opcode: %s }: %s", proto.debugname, proto.instructionlineinfo[debugging.pc], debugging.pc, debugging.name, message), 0)
+					else 
+						return error(string_format("Fiu VM Error { Name: %s PC: %s Opcode: %s }: %s", proto.debugname, debugging.pc, debugging.name, message), 0)
+					end
+				end
+			end
+
+			if luau_settings.errorHandling then 
+				return wrapped
+			else 
+				return luau_execute
+			end 
+		end
+
+		return luau_wrapclosure(module, mainProto),  luau_close
+	end
+
+	return {
+		luau_newsettings = luau_newsettings,
+		luau_validatesettings = luau_validatesettings,
+		luau_deserialize = luau_deserialize,
+		luau_load = luau_load,
+		opcodes = opList
+	}
+
+end)()
+local inspect = (function()
+	local _tl_compat; if (tonumber((_VERSION or ''):match('[%d.]*$')) or 0) < 5.3 then local p, m = pcall(require, 'compat53.module'); if p then _tl_compat = m end end; local math = _tl_compat and _tl_compat.math or math; local string = _tl_compat and _tl_compat.string or string; local table = _tl_compat and _tl_compat.table or table
+	local inspect = {Options = {}, }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	inspect._VERSION = 'inspect.lua 3.1.0'
+	inspect._URL = 'http://github.com/kikito/inspect.lua'
+	inspect._DESCRIPTION = 'human-readable representations of tables'
+	inspect._LICENSE = [[
+  MIT LICENSE
+
+  Copyright (c) 2022 Enrique García Cota
+
+  Permission is hereby granted, free of charge, to any person obtaining a
+  copy of this software and associated documentation files (the
+  "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to
+  the following conditions:
+
+  The above copyright notice and this permission notice shall be included
+  in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+]]
+	inspect.KEY = setmetatable({}, { __tostring = function() return 'inspect.KEY' end })
+	inspect.METATABLE = setmetatable({}, { __tostring = function() return 'inspect.METATABLE' end })
+
+	local tostring = tostring
+	local rep = string.rep
+	local match = string.match
+	local char = string.char
+	local gsub = string.gsub
+	local fmt = string.format
+
+	local _rawget
+	if rawget then
+		_rawget = rawget
+	else
+		_rawget = function(t, k) return t[k] end
+	end
+
+	local function rawpairs(t)
+		return next, t, nil
+	end
+
+
+
+	local function smartQuote(str)
+		if match(str, '"') and not match(str, "'") then
+			return "'" .. str .. "'"
+		end
+		return '"' .. gsub(str, '"', '\\"') .. '"'
+	end
+
+
+	local shortControlCharEscapes = {
+		["\a"] = "\\a", ["\b"] = "\\b", ["\f"] = "\\f", ["\n"] = "\\n",
+		["\r"] = "\\r", ["\t"] = "\\t", ["\v"] = "\\v", ["\127"] = "\\127",
+	}
+	local longControlCharEscapes = { ["\127"] = "\127" }
+	for i = 0, 31 do
+		local ch = char(i)
+		if not shortControlCharEscapes[ch] then
+			shortControlCharEscapes[ch] = "\\" .. i
+			longControlCharEscapes[ch] = fmt("\\%03d", i)
+		end
+	end
+
+	local function escape(str)
+		return (gsub(gsub(gsub(str, "\\", "\\\\"),
+			"(%c)%f[0-9]", longControlCharEscapes),
+			"%c", shortControlCharEscapes))
+	end
+
+	local luaKeywords = {
+		['and'] = true,
+		['break'] = true,
+		['do'] = true,
+		['else'] = true,
+		['elseif'] = true,
+		['end'] = true,
+		['false'] = true,
+		['for'] = true,
+		['function'] = true,
+		['goto'] = true,
+		['if'] = true,
+		['in'] = true,
+		['local'] = true,
+		['nil'] = true,
+		['not'] = true,
+		['or'] = true,
+		['repeat'] = true,
+		['return'] = true,
+		['then'] = true,
+		['true'] = true,
+		['until'] = true,
+		['while'] = true,
+	}
+
+	local function isIdentifier(str)
+		return type(str) == "string" and
+			not not str:match("^[_%a][_%a%d]*$") and
+			not luaKeywords[str]
+	end
+
+	local flr = math.floor
+	local function isSequenceKey(k, sequenceLength)
+		return type(k) == "number" and
+			flr(k) == k and
+			1 <= (k) and
+			k <= sequenceLength
+	end
+
+	local defaultTypeOrders = {
+		['number'] = 1, ['boolean'] = 2, ['string'] = 3, ['table'] = 4,
+		['function'] = 5, ['userdata'] = 6, ['thread'] = 7,
+	}
+
+	local function sortKeys(a, b)
+		local ta, tb = type(a), type(b)
+
+
+		if ta == tb and (ta == 'string' or ta == 'number') then
+			return (a) < (b)
+		end
+
+		local dta = defaultTypeOrders[ta] or 100
+		local dtb = defaultTypeOrders[tb] or 100
+
+
+		return dta == dtb and ta < tb or dta < dtb
+	end
+
+	local function getKeys(t)
+
+		local seqLen = 1
+		while _rawget(t, seqLen) ~= nil do
+			seqLen = seqLen + 1
+		end
+		seqLen = seqLen - 1
+
+		local keys, keysLen = {}, 0
+		for k in rawpairs(t) do
+			if not isSequenceKey(k, seqLen) then
+				keysLen = keysLen + 1
+				keys[keysLen] = k
+			end
+		end
+		table.sort(keys, sortKeys)
+		return keys, keysLen, seqLen
+	end
+
+	local function countCycles(x, cycles)
+		if type(x) == "table" then
+			if cycles[x] then
+				cycles[x] = cycles[x] + 1
+			else
+				cycles[x] = 1
+				for k, v in rawpairs(x) do
+					countCycles(k, cycles)
+					countCycles(v, cycles)
+				end
+				countCycles(getmetatable(x), cycles)
+			end
+		end
+	end
+
+	local function makePath(path, a, b)
+		local newPath = {}
+		local len = #path
+		for i = 1, len do newPath[i] = path[i] end
+
+		newPath[len + 1] = a
+		newPath[len + 2] = b
+
+		return newPath
+	end
+
+
+	local function processRecursive(process,
+		item,
+		path,
+		visited)
+		if item == nil then return nil end
+		if visited[item] then return visited[item] end
+
+		local processed = process(item, path)
+		if type(processed) == "table" then
+			local processedCopy = {}
+			visited[item] = processedCopy
+			local processedKey
+
+			for k, v in rawpairs(processed) do
+				processedKey = processRecursive(process, k, makePath(path, k, inspect.KEY), visited)
+				if processedKey ~= nil then
+					processedCopy[processedKey] = processRecursive(process, v, makePath(path, processedKey), visited)
+				end
+			end
+
+			local mt = processRecursive(process, getmetatable(processed), makePath(path, inspect.METATABLE), visited)
+			if type(mt) ~= 'table' then mt = nil end
+			setmetatable(processedCopy, mt)
+			processed = processedCopy
+		end
+		return processed
+	end
+
+	local function puts(buf, str)
+		buf.n = buf.n + 1
+		buf[buf.n] = str
+	end
+
+
+
+	local Inspector = {}
+
+
+
+
+
+
+
+
+
+
+	local Inspector_mt = { __index = Inspector }
+
+	local function tabify(inspector)
+		puts(inspector.buf, inspector.newline .. rep(inspector.indent, inspector.level))
+	end
+
+	function Inspector:getId(v)
+		local id = self.ids[v]
+		local ids = self.ids
+		if not id then
+			local tv = type(v)
+			id = (ids[tv] or 0) + 1
+			ids[v], ids[tv] = id, id
+		end
+		return tostring(id)
+	end
+
+	function Inspector:putValue(v)
+		local buf = self.buf
+		local tv = type(v)
+		if tv == 'string' then
+			puts(buf, smartQuote(escape(v)))
+		elseif tv == 'number' or tv == 'boolean' or tv == 'nil' or
+			tv == 'cdata' or tv == 'ctype' then
+			puts(buf, tostring(v))
+		elseif tv == 'table' and not self.ids[v] then
+			local t = v
+
+			if t == inspect.KEY or t == inspect.METATABLE then
+				puts(buf, tostring(t))
+			elseif self.level >= self.depth then
+				puts(buf, '{...}')
+			else
+				if self.cycles[t] > 1 then puts(buf, fmt('<%d>', self:getId(t))) end
+
+				local keys, keysLen, seqLen = getKeys(t)
+
+				puts(buf, '{')
+				self.level = self.level + 1
+
+				for i = 1, seqLen + keysLen do
+					if i > 1 then puts(buf, ',') end
+					if i <= seqLen then
+						puts(buf, ' ')
+						self:putValue(t[i])
+					else
+						local k = keys[i - seqLen]
+						tabify(self)
+						if isIdentifier(k) then
+							puts(buf, k)
+						else
+							puts(buf, "[")
+							self:putValue(k)
+							puts(buf, "]")
+						end
+						puts(buf, ' = ')
+						self:putValue(t[k])
+					end
+				end
+
+				local mt = getmetatable(t)
+				if type(mt) == 'table' then
+					if seqLen + keysLen > 0 then puts(buf, ',') end
+					tabify(self)
+					puts(buf, '<metatable> = ')
+					self:putValue(mt)
+				end
+
+				self.level = self.level - 1
+
+				if keysLen > 0 or type(mt) == 'table' then
+					tabify(self)
+				elseif seqLen > 0 then
+					puts(buf, ' ')
+				end
+
+				puts(buf, '}')
+			end
+
+		else
+			puts(buf, fmt('<%s %d>', tv, self:getId(v)))
+		end
+	end
+
+
+
+
+	function inspect.inspect(root, options)
+		options = options or {}
+
+		local depth = options.depth or (math.huge)
+		local newline = options.newline or '\n'
+		local indent = options.indent or '  '
+		local process = options.process
+
+		if process then
+			root = processRecursive(process, root, {}, {})
+		end
+
+		local cycles = {}
+		countCycles(root, cycles)
+
+		local inspector = setmetatable({
+			buf = { n = 0 },
+			ids = {},
+			cycles = cycles,
+			depth = depth,
+			level = 0,
+			newline = newline,
+			indent = indent,
+		}, Inspector_mt)
+
+		inspector:putValue(root)
+
+		return table.concat(inspector.buf)
+	end
+
+	setmetatable(inspect, {
+		__call = function(_, root, options)
+			return inspect.inspect(root, options)
+		end,
+	})
+
+	return inspect
+
+end)()
+local base64 = (function()
+	local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/' -- You will need this for encoding/decoding
+	-- encoding
+	local function enc(data)
+		return ((data:gsub('.', function(x) 
+			local r,b='',x:byte()
+			for i=8,1,-1 do r=r..(b%2^i-b%2^(i-1)>0 and '1' or '0') end
+			return r;
+		end)..'0000'):gsub('%d%d%d?%d?%d?%d?', function(x)
+			if (#x < 6) then return '' end
+			local c=0
+			for i=1,6 do c=c+(x:sub(i,i)=='1' and 2^(6-i) or 0) end
+			return b:sub(c+1,c+1)
+		end)..({ '', '==', '=' })[#data%3+1])
+	end
+
+	-- decoding
+	local function dec(data)
+		data = string.gsub(data, '[^'..b..'=]', '')
+		return (data:gsub('.', function(x)
+			if (x == '=') then return '' end
+			local r,f='',(b:find(x)-1)
+			for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end
+			return r;
+		end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x)
+			if (#x ~= 8) then return '' end
+			local c=0
+			for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end
+			return string.char(c)
+		end))
+	end
+
+	return {
+		encode = enc,
+		decode = dec
+	}
+end)()
+
+function deserialize(raw_bytecode, roblox_offset)
+	local settings = fiu.luau_newsettings()
+	if roblox_offset == nil then
+		roblox_offset = true
+	end
+	settings.robloxOffset = roblox_offset
+	settings.vectorCtor = Vector3.new
+	return fiu.luau_deserialize(raw_bytecode, settings)
+end
+
+function toboolean(n)
+	return n ~= 0
+end
+
+function decompile(bytecode)
+	bytecode = getscriptbytecode(bytecode)
+	local encoded = base64.encode(bytecode)
+	local deserialized = deserialize(base64.decode(encoded), true)
+	local code = {"--Decompiled with ArchDec V1.4"}
+
+	local instructions = deserialized.mainProto.code
+	local constants = deserialized.mainProto.k
+
+	for i, v in pairs(instructions) do
+		local op = v.opname
+		local a = v.A
+		local b = v.B
+		local c = v.C
+		local d = v.D
+		local e = v.E
+		local aux = v.aux
+		local K = v.K
+
+		local function const(a)
+			if type(a.K) == "string" then
+				return '"' .. a.K .. '"'
+			elseif type(a.K) == "number" then
+				return a.K
+			elseif type(a.K) == "boolean" then
+				return tostring(a.K)
+			else
+				return "--unsupported"
+			end
+		end
+
+		local function f(v)
+			table.insert(code, v)
+		end
+
+		if op == "LOADNIL" then
+			f("local v" .. a .. " = nil")
+		elseif op == "NOP" then
+			--nop, no operation :)
+		elseif op == "BREAK" then
+			f("break")
+		elseif op == "LOADB" then
+			f("local v" .. a .. " = " .. tostring(toboolean(b)) .. " -- jump offset")
+		elseif op == "LOADK" then
+			f("local v" .. a .. " = " .. const(v))
+		elseif op == "NEWTABLE" then
+			f("local v" .. a .. " = {}")
+		elseif op == "MOVE" then
+			f("v" .. a .. " = v" .. b)
+		elseif op == "SETUPVAL" then
+			f("local v_u_" .. b .. " = " .. "v" .. a)
+		elseif op == "GETUPVAL" then
+			f("local v" .. a .. " = v_u_" .. b)
+		elseif op == "CLOSEUPVALS" then
+			f("--closeupvals")
+		elseif op == "GETIMPORT" then
+			f("local v" .. a .. " = " .. constants[d])
+		elseif op == "CALL" then
+			f("v" .. a .. "(" .. "v" .. b .. ")")
+		elseif op == "SETTABLE" then
+			f("v" .. b .. "[" .. "v" .. c .. "] = v" .. a)
+		elseif op == "GETTABLE" then
+			f("local v" .. a .. " = v" .. b .. "[" .. "v" .. c .. "]")
+		elseif op == "SETTABLEKS" then
+			f("v" .. b .. "[" .. const(v) .. "] = v" .. a)
+		elseif op == "GETTABLEKS" then
+			f("local v" .. a .. " = v" .. b .. "[" .. const(v) .. "]")
+		elseif op == "GETGLOBAL" then
+			f("local v" .. a .. " = _G[" .. const(v) .. "]")
+		elseif op == "SETGLOBAL" then
+			f("_G[" .. const(v) .. "] = v" .. a)
+		elseif op == "GETTABLEN" then
+			f("local v" .. a .. " = v" .. b .. "[" .. c .. "]")
+		elseif op == "SETTABLEN" then
+			f("v" .. b.. "[" .. c .. "] = v" .. a)
+		elseif op == "NEWCLOSURE" then
+			f("--newclosure")
+		elseif op == "NAMECALL" then
+			f("v" .. b .. ":" .. K .. "()")
+		elseif op == "RETURN" then
+			f("return v" .. a)
+		elseif op == "JUMP" then
+			f("--jump")
+		elseif op == "JUMPBACK" then
+			f("--jumpback")
+		elseif op == "ADD" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " + " .. "v" .. c)
+		elseif op == "SUB" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " - " .. "v" .. c)
+		elseif op == "MUL" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " * " .. "v" .. c)
+		elseif op == "DIV" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " / " .. "v" .. c)
+		end
+	end
+	return table.concat(code, "\n")
+end
