@@ -9,7 +9,7 @@ No, the code is NOT open source and is not allowed to be used, skidded or claime
 
 CREDITS:
 
-w-a-e, for the reader module and the luau module.
+tox for helping me
 
 To use archdec, join the discord server and get the loadstring:
 https://discord.gg/hDWVzBgyA5
