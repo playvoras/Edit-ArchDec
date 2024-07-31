@@ -1775,7 +1775,7 @@ function decompile(bytecode)
 	bytecode = getscriptbytecode(bytecode)
 	local encoded = base64.encode(bytecode)
 	local deserialized = deserialize(base64.decode(encoded), true)
-	local code = {"--Decompiled with ArchDec V1.4"}
+	local code = {"--Decompiled with Edit-ArchDec V1.4"}
 
 	local instructions = deserialized.mainProto.code
 	local constants = deserialized.mainProto.k
@@ -1864,7 +1864,45 @@ function decompile(bytecode)
 			f("local v" .. a .. " = " .. "v" .. b  .. " * " .. "v" .. c)
 		elseif op == "DIV" then
 			f("local v" .. a .. " = " .. "v" .. b  .. " / " .. "v" .. c)
+		elseif op == "FORPREP" then
+			f("for i = " .. "v" .. a .. ", v" .. b .. ", v" .. c .. " do")
+		elseif op == "FORLOOP" then
+			f("end")
+		elseif op == "TFORCALL" then
+			f("-- tforcall")
+		elseif op == "TFORLOOP" then
+			f("-- tforloop")
+		elseif op == "CONCAT" then
+			f("local v" .. a .. " = " .. "v" .. b .. " .. " .. "v" .. c)
+		elseif op == "MOD" then
+			f("local v" .. a .. " = " .. "v" .. b .. " % " .. "v" .. c)
+		elseif op == "POW" then
+			f("local v" .. a .. " = " .. "v" .. b .. " ^ " .. "v" .. c)
+		elseif op == "UNM" then
+			f("local v" .. a .. " = -" .. "v" .. b)
+		elseif op == "LEN" then
+			f("local v" .. a .. " = #" .. "v" .. b)
+		elseif op == "EQ" then
+			f("if v" .. a .. " == " .. "v" .. b .. " then")
+		elseif op == "LT" then
+			f("if v" .. a .. " < " .. "v" .. b .. " then")
+		elseif op == "LE" then
+			f("if v" .. a .. " <= " .. "v" .. b .. " then")
+		elseif op == "LOADKX" then
+			f("local v" .. a .. " = " .. constants[aux])
+		elseif op == "CLOSURE" then
+			f("local v" .. a .. " = function(...) end")
+		elseif op == "VARARG" then
+			f("local v" .. a .. " = {...}")
+		elseif op == "TAILCALL" then
+			f("return v" .. a .. "(" .. "v" .. b .. ")")
+		elseif op == "SETUPVAL" then
+			f("v_u_" .. b .. " = v" .. a)
+		elseif op == "GETUPVAL" then
+			f("local v" .. a .. " = v_u_" .. b)
 		end
 	end
 	return table.concat(code, "\n")
 end
+
+setclipboard(decompile(game.Players.LocalPlayer.Character.Animate))
