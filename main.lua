@@ -1900,6 +1900,18 @@ function decompile(bytecode)
 			f("v_u_" .. b .. " = v" .. a)
 		elseif op == "GETUPVAL" then
 			f("local v" .. a .. " = v_u_" .. b)
+		elseif op == "IDIV" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " // " .. "v" .. c)
+		elseif op == "IDIVK" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " // " .. constants[aux])
+		elseif op == "MODK" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " % " .. constants[aux])
+		elseif op == "SHL" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " << " .. "v" .. c)
+		elseif op == "SHR" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " >> " .. "v" .. c)
+		elseif op == "BOR" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " | " .. "v" .. c)
 		end
 	end
 	return table.concat(code, "\n")
