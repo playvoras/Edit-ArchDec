@@ -1834,7 +1834,8 @@ function decompile(bytecode)
         elseif op == "GETTABLE" then
             f("local v" .. a .. " = v" .. b .. "[v" .. c .. "]", op)
         elseif op == "SETTABLEKS" then
-            f("v" .. b .. "[" .. const(v) .. "] = v" .. a, op)
+            local varname = "v" .. b .. "[" .. const(v) .. "]"
+            f("local " .. varname .. " = v" .. a, op)
         elseif op == "GETTABLEKS" then
             f("local v" .. a .. " = v" .. b .. "[" .. const(v) .. "]", op)
         elseif op == "GETGLOBAL" then
