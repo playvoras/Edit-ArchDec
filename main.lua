@@ -1906,6 +1906,8 @@ function decompile(bytecode)
             f("local v" .. a .. " = v_u_" .. b, op)
         elseif op == "IDIV" then
             f("local v" .. a .. " = v" .. b .. " // v" .. c, op)
+	elseif op == "SUBRK" then
+            f("local v" .. a .. " = " .. "v" .. b  .. " - " .. constants[c])
         elseif op == "IDIVK" then
             f("local v" .. a .. " = v" .. b .. " // " .. constants[aux], op)
         elseif op == "MODK" then
