@@ -1829,6 +1829,8 @@ function decompile(bytecode)
             f("local fastcall = fastcall(" .. "v" .. a .. ", " .. b .. ", " .. c .. ")")
         elseif op == "GETIMPORT" then
             f("local v" .. a .. " = " .. constants[d], op)
+	elseif op == "DIVRK" then
+            f("local v" .. a .. " = " .. "v" .. b  .. " / " .. constants[c])
         elseif op == "CALL" then
             f("v" .. a .. "(" .. "v" .. b .. ")", op)
         elseif op == "SETTABLE" then
