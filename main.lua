@@ -1825,6 +1825,8 @@ function decompile(bytecode)
             f("local v" .. a .. " = v_u_" .. b, op)
         elseif op == "CLOSEUPVALS" then
             f("-- closeupvals", op)
+	elseif op == "FASTCALL" then
+            f("local fastcall = fastcall(" .. "v" .. a .. ", " .. b .. ", " .. c .. ")")
         elseif op == "GETIMPORT" then
             f("local v" .. a .. " = " .. constants[d], op)
         elseif op == "CALL" then
