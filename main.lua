@@ -1917,4 +1917,4 @@ function decompile(bytecode)
 	return table.concat(code, "\n")
 end
 
-setclipboard(decompile(game.Players.LocalPlayer.Character.Animate))
+getgenv().decompile = decompile
