@@ -1872,6 +1872,8 @@ function decompile(bytecode)
                         f("--fastcall2")
                 elseif op == "FASTCALL2K" then
                         f("--fastcall2k")
+		elseif op == "LOADKX" then
+                        f("local v" .. a .. " = " .. const(constants[aux]))
 		end
 	end
 	return table.concat(code, "\n")
