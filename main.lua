@@ -1877,7 +1877,7 @@ function decompile(bytecode)
 	        elseif op == "COVERAGE" then
                         f("-- coverage")
 	        elseif op == "DUPCLOSURE" then
-                        f("local v" .. a .. " = function(...) --[[" .. "closure " .. b .. "]] end")
+                        f("-- dupclosure not impl")
 		end
 	end
 	return table.concat(code, "\n")
