@@ -1840,6 +1840,8 @@ function decompile(bytecode)
             append("local v" .. a .. " = _G[" .. const(constants[d]) .. "]")
         elseif op == "SETGLOBAL" then
             append("_G[" .. const(constants[d]) .. "] = v" .. a)
+	elseif op == "LOADKX" then
+            append("local v" .. a .. " = " .. const(constants[aux]))
         elseif op == "GETTABLEN" then
             append("local v" .. a .. " = v" .. b .. "[" .. c .. "]")
         elseif op == "SETTABLEN" then
