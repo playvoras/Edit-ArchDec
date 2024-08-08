@@ -1884,4 +1884,3 @@ function decompile(bytecode)
 end
 
 getgenv().decompile = decompile
-getgenv().dissassemble = decompile
