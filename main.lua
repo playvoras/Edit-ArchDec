@@ -1809,7 +1809,7 @@ function decompile(bytecode)
 		if op == "LOADNIL" then
 			f("local v" .. a .. " = nil")
 		elseif op == "NOP" then
-			--nop, no operation :)
+			f("-- nop")
 		elseif op == "BREAK" then
 			f("break")
 		elseif op == "LOADB" then
