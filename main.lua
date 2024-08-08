@@ -1772,145 +1772,107 @@ function toboolean(n)
 end
 
 function decompile(bytecode)
-    bytecode = getscriptbytecode(bytecode)
-    local encoded = base64.encode(bytecode)
-    local deserialized = deserialize(base64.decode(encoded), true)
-    local code = {"-- Decompiled with ArchDec V1.5, discord: https://discord.gg/hDWVzBgyA5"}
+	bytecode = getscriptbytecode(bytecode)
+	local encoded = base64.encode(bytecode)
+	local deserialized = deserialize(base64.decode(encoded), true)
+	local code = {"--Decompiled with ArchDec V1.5, discord: https://discord.gg/hDWVzBgyA5"}
 
-    local instructions = deserialized.mainProto.code
-    local constants = deserialized.mainProto.k
+	local instructions = deserialized.mainProto.code
+	local constants = deserialized.mainProto.k
 
-    local function const(k)
-        if type(k) == "string" then
-            return '"' .. k .. '"'
-        elseif type(k) == "number" then
-            return k
-        elseif type(k) == "boolean" then
-            return tostring(k)
-        else
-            return "--unsupported"
-        end
-    end
+	for i, v in pairs(instructions) do
+		local op = v.opname
+		local a = v.A
+		local b = v.B
+		local c = v.C
+		local d = v.D
+		local e = v.E
+		local aux = v.aux
+		local K = v.K
 
-    local function append(line)
-        table.insert(code, line)
-    end
+		local function const(a)
+			if type(a.K) == "string" then
+				return '"' .. a.K .. '"'
+			elseif type(a.K) == "number" then
+				return a.K
+			elseif type(a.K) == "boolean" then
+				return tostring(a.K)
+			else
+				return "--unsupported"
+			end
+		end
 
-    for _, v in pairs(instructions) do
-        local op = v.opname
-        local a = v.A
-        local b = v.B
-        local c = v.C
-        local d = v.D
-        local e = v.E
-        local aux = v.aux
-        local K = v.K
+		local function f(v)
+			table.insert(code, v)
+		end
 
-        if op == "LOADNIL" then
-            append("local v" .. a .. " = nil")
-        elseif op == "BREAK" then
-            append("break")
-        elseif op == "LOADB" then
-            append("local v" .. a .. " = " .. tostring(toboolean(b)))
-        elseif op == "LOADK" then
-            append("local v" .. a .. " = " .. const(constants[d]))
-        elseif op == "NEWTABLE" then
-            append("local v" .. a .. " = {}")
-        elseif op == "MOVE" then
-            append("v" .. a .. " = v" .. b)
-        elseif op == "SETUPVAL" then
-            append("local v_u_" .. b .. " = v" .. a)
-        elseif op == "GETUPVAL" then
-            append("local v" .. a .. " = v_u_" .. b)
-        elseif op == "CLOSEUPVALS" then
-            append("--closeupvals")
-        elseif op == "GETIMPORT" then
-            append("local v" .. a .. " = " .. constants[d])
-        elseif op == "CALL" then
-            append("v" .. a .. "(" .. "v" .. b .. ")")
-        elseif op == "SETTABLE" then
-            append("v" .. b .. "[v" .. c .. "] = v" .. a)
-        elseif op == "GETTABLE" then
-            append("local v" .. a .. " = v" .. b .. "[v" .. c .. "]")
-        elseif op == "SETTABLEKS" then
-            append("v" .. b .. "[" .. const(constants[d]) .. "] = v" .. a)
-        elseif op == "GETTABLEKS" then
-            append("local v" .. a .. " = v" .. b .. "[" .. const(constants[d]) .. "]")
-        elseif op == "GETGLOBAL" then
-            append("local v" .. a .. " = _G[" .. const(constants[d]) .. "]")
-        elseif op == "SETGLOBAL" then
-            append("_G[" .. const(constants[d]) .. "] = v" .. a)
-	elseif op == "LOADKX" then
-            append("local v" .. a .. " = " .. const(constants[aux]))
-        elseif op == "GETTABLEN" then
-            append("local v" .. a .. " = v" .. b .. "[" .. c .. "]")
-        elseif op == "SETTABLEN" then
-            append("v" .. b .. "[" .. c .. "] = v" .. a)
-        elseif op == "NEWCLOSURE" then
-            append("--newclosure")
-        elseif op == "NAMECALL" then
-            append("v" .. b .. ":" .. K .. "()")
-        elseif op == "RETURN" then
-            append("return v" .. a)
-        elseif op == "JUMP" then
-            append("--jump")
-        elseif op == "JUMPBACK" then
-            append("--jumpback")
-        elseif op == "ADD" then
-            append("local v" .. a .. " = v" .. b .. " + v" .. c)
-        elseif op == "SUB" then
-            append("local v" .. a .. " = v" .. b .. " - v" .. c)
-        elseif op == "MUL" then
-            append("local v" .. a .. " = v" .. b .. " * v" .. c)
-        elseif op == "DIV" then
-            append("local v" .. a .. " = v" .. b .. " / v" .. c)
-        elseif op == "POW" then
-            append("local v" .. a .. " = v" .. b .. " ^ v" .. c)
-        elseif op == "MOD" then
-            append("local v" .. a .. " = v" .. b .. " % v" .. c)
-        elseif op == "UNM" then
-            append("local v" .. a .. " = -v" .. b)
-        elseif op == "NOT" then
-            append("local v" .. a .. " = not v" .. b)
-        elseif op == "LEN" then
-            append("local v" .. a .. " = #v" .. b)
-        elseif op == "CONCAT" then
-            append("local v" .. a .. " = v" .. b .. " .. v" .. c)
-        elseif op == "EQ" then
-            append("if v" .. b .. " == v" .. c .. " then")
-        elseif op == "LT" then
-            append("if v" .. b .. " < v" .. c .. " then")
-        elseif op == "LE" then
-            append("if v" .. b .. " <= v" .. c .. " then")
-	elseif op == "FASTCALL" then
-            append("--fastcall")
-        elseif op == "FASTCALL1" then
-            append("--fastcall1")
-        elseif op == "FASTCALL2" then
-            append("--fastcall2")
-        elseif op == "FASTCALL2K" then
-            append("--fastcall2k")
-        elseif op == "TEST" then
-            append("if v" .. a .. " then")
-        elseif op == "TESTSET" then
-            append("if v" .. b .. " then v" .. a .. " = v" .. b .. " end")
-        elseif op == "FORPREP" then
-            append("for i = v" .. a .. ", v" .. b .. ", v" .. c .. " do")
-        elseif op == "FORLOOP" then
-            append("end")
-        elseif op == "TFORCALL" then
-            append("local v" .. a .. " = v" .. b .. "()")
-        elseif op == "TFORLOOP" then
-            append("end")
-        elseif op == "SETLIST" then
-            append("--setlist")
-        elseif op == "CLOSURE" then
-            append("--closure")
-        elseif op == "VARARG" then
-            append("local v" .. a .. " = ...")
-        end
-    end
-    return table.concat(code, "\n")
+		if op == "LOADNIL" then
+			f("local v" .. a .. " = nil")
+		elseif op == "NOP" then
+			--nop, no operation :)
+		elseif op == "BREAK" then
+			f("break")
+		elseif op == "LOADB" then
+			f("local v" .. a .. " = " .. tostring(toboolean(b)) .. " -- jump offset")
+		elseif op == "LOADK" then
+			f("local v" .. a .. " = " .. const(v))
+		elseif op == "NEWTABLE" then
+			f("local v" .. a .. " = {}")
+		elseif op == "MOVE" then
+			f("v" .. a .. " = v" .. b)
+		elseif op == "SETUPVAL" then
+			f("local v_u_" .. b .. " = " .. "v" .. a)
+		elseif op == "GETUPVAL" then
+			f("local v" .. a .. " = v_u_" .. b)
+		elseif op == "CLOSEUPVALS" then
+			f("--closeupvals")
+		elseif op == "GETIMPORT" then
+			f("local v" .. a .. " = " .. constants[d])
+		elseif op == "CALL" then
+			f("v" .. a .. "(" .. "v" .. b .. ")")
+		elseif op == "SETTABLE" then
+			f("v" .. b .. "[" .. "v" .. c .. "] = v" .. a)
+		elseif op == "GETTABLE" then
+			f("local v" .. a .. " = v" .. b .. "[" .. "v" .. c .. "]")
+		elseif op == "SETTABLEKS" then
+			f("v" .. b .. "[" .. const(v) .. "] = v" .. a)
+		elseif op == "GETTABLEKS" then
+			f("local v" .. a .. " = v" .. b .. "[" .. const(v) .. "]")
+		elseif op == "GETGLOBAL" then
+			f("local v" .. a .. " = _G[" .. const(v) .. "]")
+		elseif op == "SETGLOBAL" then
+			f("_G[" .. const(v) .. "] = v" .. a)
+		elseif op == "GETTABLEN" then
+			f("local v" .. a .. " = v" .. b .. "[" .. c .. "]")
+		elseif op == "SETTABLEN" then
+			f("v" .. b.. "[" .. c .. "] = v" .. a)
+		elseif op == "NEWCLOSURE" then
+			f("--newclosure")
+		elseif op == "NAMECALL" then
+			f("v" .. b .. ":" .. K .. "()")
+		elseif op == "RETURN" then
+			f("return v" .. a)
+		elseif op == "JUMP" then
+			f("--jump")
+		elseif op == "JUMPBACK" then
+			f("--jumpback")
+		elseif op == "ADD" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " + " .. "v" .. c)
+		elseif op == "SUB" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " - " .. "v" .. c)
+		elseif op == "MUL" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " * " .. "v" .. c)
+		elseif op == "DIV" then
+			f("local v" .. a .. " = " .. "v" .. b  .. " / " .. "v" .. c)
+		elseif op == "FASTCALL" then
+                        f("--fastcall")
+                elseif op == "FASTCALL1" then
+                        f("--fastcall1")
+                elseif op == "FASTCALL2" then
+                        f("--fastcall2")
+                elseif op == "FASTCALL2K" then
+                        f("--fastcall2k")
+		end
+	end
+	return table.concat(code, "\n")
 end
-
-getgenv().decompile = decompile
