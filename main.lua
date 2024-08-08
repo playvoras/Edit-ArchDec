@@ -1876,3 +1876,6 @@ function decompile(bytecode)
 	end
 	return table.concat(code, "\n")
 end
+
+getgenv().decompile = decompile
+getgenv().dissassemble = decompile
