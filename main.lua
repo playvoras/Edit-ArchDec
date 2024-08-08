@@ -1802,6 +1802,8 @@ function decompile(bytecode)
         local b = v.B
         local c = v.C
         local d = v.D
+        local e = v.E
+        local aux = v.aux
         local K = v.K
 
         if op == "LOADNIL" then
@@ -1860,6 +1862,42 @@ function decompile(bytecode)
             append("local v" .. a .. " = v" .. b .. " * v" .. c)
         elseif op == "DIV" then
             append("local v" .. a .. " = v" .. b .. " / v" .. c)
+        elseif op == "POW" then
+            append("local v" .. a .. " = v" .. b .. " ^ v" .. c)
+        elseif op == "MOD" then
+            append("local v" .. a .. " = v" .. b .. " % v" .. c)
+        elseif op == "UNM" then
+            append("local v" .. a .. " = -v" .. b)
+        elseif op == "NOT" then
+            append("local v" .. a .. " = not v" .. b)
+        elseif op == "LEN" then
+            append("local v" .. a .. " = #v" .. b)
+        elseif op == "CONCAT" then
+            append("local v" .. a .. " = v" .. b .. " .. v" .. c)
+        elseif op == "EQ" then
+            append("if v" .. b .. " == v" .. c .. " then")
+        elseif op == "LT" then
+            append("if v" .. b .. " < v" .. c .. " then")
+        elseif op == "LE" then
+            append("if v" .. b .. " <= v" .. c .. " then")
+        elseif op == "TEST" then
+            append("if v" .. a .. " then")
+        elseif op == "TESTSET" then
+            append("if v" .. b .. " then v" .. a .. " = v" .. b .. " end")
+        elseif op == "FORPREP" then
+            append("for i = v" .. a .. ", v" .. b .. ", v" .. c .. " do")
+        elseif op == "FORLOOP" then
+            append("end")
+        elseif op == "TFORCALL" then
+            append("local v" .. a .. " = v" .. b .. "()")
+        elseif op == "TFORLOOP" then
+            append("end")
+        elseif op == "SETLIST" then
+            append("--setlist")
+        elseif op == "CLOSURE" then
+            append("--closure")
+        elseif op == "VARARG" then
+            append("local v" .. a .. " = ...")
         end
     end
     return table.concat(code, "\n")
