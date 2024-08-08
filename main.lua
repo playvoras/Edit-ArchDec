@@ -1880,6 +1880,14 @@ function decompile(bytecode)
             append("if v" .. b .. " < v" .. c .. " then")
         elseif op == "LE" then
             append("if v" .. b .. " <= v" .. c .. " then")
+	elseif op == "FASTCALL" then
+            append("--fastcall")
+        elseif op == "FASTCALL1" then
+            append("--fastcall1")
+        elseif op == "FASTCALL2" then
+            append("--fastcall2")
+        elseif op == "FASTCALL2K" then
+            append("--fastcall2k")
         elseif op == "TEST" then
             append("if v" .. a .. " then")
         elseif op == "TESTSET" then
