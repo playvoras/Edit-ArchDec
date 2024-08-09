@@ -1777,7 +1777,7 @@ function ArchDecompile(bytecode)
 	bytecode = getscriptbytecode(bytecode)
 	local encoded = base64.encode(bytecode)
 	local deserialized = deserialize(base64.decode(encoded), true)
-	local code = {"--Decompiled with ArchDec V1.5, discord: https://discord.gg/hDWVzBgyA5"}
+	local code = {"--Decompiled with Fork-ArchDec V1.6"}
 
 	local instructions = deserialized.mainProto.code
 	local constants = deserialized.mainProto.k
