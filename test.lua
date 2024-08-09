@@ -46,7 +46,7 @@ function deserialize(bytecode) -- rescript moment
 	end
 
 	local version = reader:nextByte()
-	if version ~= 5 then
+	if version ~= 6 then
 		error(string.format("Invalid bytecode (version: %i)", version))
 		return nil
 	end
