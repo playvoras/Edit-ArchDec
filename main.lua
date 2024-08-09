@@ -1904,8 +1904,8 @@ local function decompile(path)
     local constant_msg = '-- [[ constants ]] --\n'
     local defined_constants = {}
     local defined_variables = {}
-    local renamed_variables = {} -- Track renamed variables
-    local renamed_constants = {} -- Track renamed constants
+    local renamed_variables = {}
+    local renamed_constants = {}
 
     for i = 1, 100 do
         output = output:gsub('__' .. i, '')
