@@ -1,6 +1,6 @@
 -- mid at decompilng ig the indentation are just trash
 
-function deserialize(bytecode) -- rescript moment
+local function deserialize(bytecode) -- rescript moment
 	local reader = {
 		pos = 1,
 		bytecode = bytecode
