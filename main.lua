@@ -1815,7 +1815,7 @@ function ArchDecompile(bytecode)
 		elseif op == "BREAK" then
 			f("break")
 		elseif op == "LOADB" then
-			f("local v" .. a .. " = " .. tostring(toboolean(b)) .. " -- jump offset")
+			f("local v" .. a .. " = " .. tostring(toboolean(b)) .. ")
 		elseif op == "LOADK" then
 			f("local v" .. a .. " = " .. const(v))
 		elseif op == "NEWTABLE" then
