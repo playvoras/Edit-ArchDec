@@ -1,3 +1,5 @@
+-- recommended to use codex
+
 local luaParser = loadstring(game:HttpGet("https://raw.githubusercontent.com/ReFreezed/DumbLuaParser/master/dumbParser.lua"))
 
 local fiu = (function()
