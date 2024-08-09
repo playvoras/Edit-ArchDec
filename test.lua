@@ -1,6 +1,6 @@
 -- mid at decompilng ig the indentation are just trash
 
-local function deserialize(bytecode) -- rescript moment
+function deserialize(bytecode) -- rescript moment
 	local reader = {
 		pos = 1,
 		bytecode = bytecode
@@ -12,9 +12,13 @@ local function deserialize(bytecode) -- rescript moment
 		return v
 	end
 
-	function reader:readUInt32LE()
+	function reader:nextChar()
+		return string.char(self:nextByte())
+	end
+
+	function reader:nextInt()
 		local b1, b2, b3, b4 = self:nextByte(), self:nextByte(), self:nextByte(), self:nextByte()
-		return b1 + bit32.lshift(b2, 8) + bit32.lshift(b3, 16) + bit32.lshift(b4, 24)
+		return bit32.bor(bit32.lshift(b4, 24), bit32.lshift(b3, 16), bit32.lshift(b2, 8), b1)
 	end
 
 	function reader:nextVarInt()
@@ -42,7 +46,7 @@ local function deserialize(bytecode) -- rescript moment
 	end
 
 	local version = reader:nextByte()
-	if version ~= 6 then
+	if version ~= 5 then
 		error(string.format("Invalid bytecode (version: %i)", version))
 		return nil
 	end
@@ -83,7 +87,7 @@ local function deserialize(bytecode) -- rescript moment
 
 		proto.sizeCode = reader:nextVarInt()
 		for j = 1, proto.sizeCode do
-			proto.codeTable[j] = reader:readUInt32LE()
+			proto.codeTable[j] = reader:nextInt()
 		end
 
 		proto.sizeConsts = reader:nextVarInt()
@@ -96,7 +100,7 @@ local function deserialize(bytecode) -- rescript moment
 			elseif k.type == 3 then
 				k.value = stringTable[reader:nextVarInt()]
 			elseif k.type == 4 then
-				k.value = reader:readUInt32LE()
+				k.value = reader:nextInt()
 			elseif k.type == 5 then
 				k.value = { size = reader:nextVarInt(), ids = {} }
 				for s = 1, k.value.size do
@@ -126,7 +130,7 @@ local function deserialize(bytecode) -- rescript moment
 
 			local intervals = bit32.rshift(proto.sizeCode - 1, compKey) + 1
 			for j = 1, intervals do
-				proto.largeLineInfo[j] = reader:readUInt32LE()
+				proto.largeLineInfo[j] = reader:nextInt()
 			end
 		end
 
@@ -138,7 +142,6 @@ local function deserialize(bytecode) -- rescript moment
 	local mainProtoId = reader:nextVarInt()
 	return protoTable[mainProtoId + 1], protoTable, stringTable
 end
-
 
 function getluauoptable()
 	return {
@@ -882,5 +885,3 @@ function decompile(a1, showOps)
 end
 
 getgenv().decompile = decompile
-
-setclipboard(decompile(game.Players.LocalPlayer.Character.Animate))
