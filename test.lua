@@ -12,13 +12,9 @@ function deserialize(bytecode) -- rescript moment
 		return v
 	end
 
-	function reader:nextChar()
-		return string.char(self:nextByte())
-	end
-
-	function reader:nextInt()
+	function reader:readUInt32LE()
 		local b1, b2, b3, b4 = self:nextByte(), self:nextByte(), self:nextByte(), self:nextByte()
-		return bit32.bor(bit32.lshift(b4, 24), bit32.lshift(b3, 16), bit32.lshift(b2, 8), b1)
+		return b1 + bit32.lshift(b2, 8) + bit32.lshift(b3, 16) + bit32.lshift(b4, 24)
 	end
 
 	function reader:nextVarInt()
@@ -46,7 +42,7 @@ function deserialize(bytecode) -- rescript moment
 	end
 
 	local version = reader:nextByte()
-	if version ~= 5 then
+	if version ~= 6 then
 		error(string.format("Invalid bytecode (version: %i)", version))
 		return nil
 	end
@@ -87,7 +83,7 @@ function deserialize(bytecode) -- rescript moment
 
 		proto.sizeCode = reader:nextVarInt()
 		for j = 1, proto.sizeCode do
-			proto.codeTable[j] = reader:nextInt()
+			proto.codeTable[j] = reader:readUInt32LE()
 		end
 
 		proto.sizeConsts = reader:nextVarInt()
@@ -100,7 +96,7 @@ function deserialize(bytecode) -- rescript moment
 			elseif k.type == 3 then
 				k.value = stringTable[reader:nextVarInt()]
 			elseif k.type == 4 then
-				k.value = reader:nextInt()
+				k.value = reader:readUInt32LE()
 			elseif k.type == 5 then
 				k.value = { size = reader:nextVarInt(), ids = {} }
 				for s = 1, k.value.size do
@@ -130,7 +126,7 @@ function deserialize(bytecode) -- rescript moment
 
 			local intervals = bit32.rshift(proto.sizeCode - 1, compKey) + 1
 			for j = 1, intervals do
-				proto.largeLineInfo[j] = reader:nextInt()
+				proto.largeLineInfo[j] = reader:readUInt32LE()
 			end
 		end
 
@@ -142,6 +138,7 @@ function deserialize(bytecode) -- rescript moment
 	local mainProtoId = reader:nextVarInt()
 	return protoTable[mainProtoId + 1], protoTable, stringTable
 end
+
 
 function getluauoptable()
 	return {
