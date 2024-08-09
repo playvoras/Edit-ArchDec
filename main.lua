@@ -1773,7 +1773,7 @@ function toboolean(n)
 	return n ~= 0
 end
 
-function decompiles(bytecode)
+function ArchDecompile(bytecode)
 	bytecode = getscriptbytecode(bytecode)
 	local encoded = base64.encode(bytecode)
 	local deserialized = deserialize(base64.decode(encoded), true)
@@ -1885,4 +1885,4 @@ function decompiles(bytecode)
 	return table.concat(code, "\n")
 end
 
-getgenv().decompiles = decompiles
+getgenv().ArchDecompile = ArchDecompile
