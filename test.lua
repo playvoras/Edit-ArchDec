@@ -147,8 +147,11 @@ local function deserialize(bytecode)
     end
 
     local mainProtoId = reader:nextVarInt()
-    return protoTable[mainProtoId + 1], protoTable, stringTable
+    local mainProto = protoTable[mainProtoId + 1]
+    mainProto.source = "main"
+    return mainProto, protoTable, stringTable
 end
+
 
 function getluauoptable()
 	return {
