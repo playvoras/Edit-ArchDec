@@ -1885,6 +1885,7 @@ function ArchDecompile(bytecode)
 	return table.concat(code, "\n")
 end
 getgenv().ArchDecompile = ArchDecompile
+
 local function decompile(path)
     local output = ArchDecompile(path)
     
@@ -1903,12 +1904,26 @@ local function decompile(path)
     local constant_msg = '-- [[ constants ]] --\n'
     local defined_constants = {}
     local defined_variables = {}
+    local renamed_variables = {} -- Track renamed variables
+    local renamed_constants = {} -- Track renamed constants
 
     for i = 1, 100 do
         output = output:gsub('__' .. i, '')
-        output = output:gsub('u' .. i, 'c_' .. i)
-        output = output:gsub('p' .. i, 'parameter_' .. i)
-        output = output:gsub('v' .. i, 'v_' .. i)
+
+        if not renamed_constants['c_' .. i] then
+            output = output:gsub('u' .. i, 'c_' .. i)
+            renamed_constants['c_' .. i] = true
+        end
+
+        if not renamed_variables['parameter_' .. i] then
+            output = output:gsub('p' .. i, 'parameter_' .. i)
+            renamed_variables['parameter_' .. i] = true
+        end
+
+        if not renamed_variables['v_' .. i] then
+            output = output:gsub('v' .. i, 'v_' .. i)
+            renamed_variables['v_' .. i] = true
+        end
 
         if output:find('v_' .. i) and not (output:find('local v_' .. i)) then
             output = output:gsub('local v_' .. i, 'v_' .. i)
@@ -1947,4 +1962,5 @@ local function decompile(path)
 
     return output
 end
+									
 getgenv().decompile = decompile
