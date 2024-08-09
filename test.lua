@@ -1,156 +1,147 @@
 -- mid at decompilng ig the indentation are just trash
 
-local function deserialize(bytecode)
-    local reader do
-        reader = {}
-        pos = 1
-        function reader:pos() return pos end
-        function reader:nextByte()
-            local v = bytecode:byte(pos, pos)
-            pos = pos + 1
-            return v
-        end
-        function reader:nextChar()
-            return string.char(reader:nextByte())
-        end
-        function reader:nextInt()
-            local b = { reader:nextByte(), reader:nextByte(), reader:nextByte(), reader:nextByte() }
-            return bit32.bor(bit32.lshift(b[4], 24), bit32.bor(bit32.lshift(b[3], 16), bit32.bor(bit32.lshift(b[2], 8), b[1])))
-        end
-        function reader:nextVarInt()
-            local c1, c2, b, r = 0, 0, 0, 0
-            repeat
-                c1 = reader:nextByte()
-                c2 = bit32.band(c1, 0x7F)
-                r = bit32.bor(r, bit32.lshift(c2, b))
-                b = b + 7
-            until not bit32.btest(c1, 0x80)
-            return r
-        end
-        function reader:nextString()
-            local result = ""
-            local len = reader:nextVarInt()
-            for i = 1, len do
-                result = result .. reader:nextChar()
-            end
-            return result
-        end
-        function reader:nextDouble()
-            local b = {}
-            for i = 1, 8 do
-                table.insert(b, reader:nextByte())
-            end
-            local str = ''
-            for i = 1, 8 do
-                str = str .. string.char(b[i])
-            end
-            return string.unpack("<d", str)
-        end
-    end
+function deserialize(bytecode) -- rescript moment
+	local reader = {
+		pos = 1,
+		bytecode = bytecode
+	}
 
-    local bytecodeVersion = reader:nextByte()
-    if bytecodeVersion == 0 then
-        error(string.format("Invalid bytecode (version: %i)", bytecodeVersion))
-        return nil
-    end
+	function reader:nextByte()
+		local v = self.bytecode:byte(self.pos, self.pos)
+		self.pos = self.pos + 1
+		return v
+	end
 
-    local protoTable = {}
-    local stringTable = {}
-    local bytecodeEncoding = reader:nextByte()
+	function reader:nextChar()
+		return string.char(self:nextByte())
+	end
 
-    local sizeStrings = reader:nextVarInt()
-    for i = 1, sizeStrings do
-        stringTable[i] = reader:nextString()
-    end
+	function reader:nextInt()
+		local b1, b2, b3, b4 = self:nextByte(), self:nextByte(), self:nextByte(), self:nextByte()
+		return bit32.bor(bit32.lshift(b4, 24), bit32.lshift(b3, 16), bit32.lshift(b2, 8), b1)
+	end
 
-    local sizeProtos = reader:nextVarInt()
-    for i = 1, sizeProtos do
-        protoTable[i] = {
-            codeTable = {},
-            kTable = {},
-            pTable = {},
-            smallLineInfo = {},
-            largeLineInfo = {}
-        }
-    end
+	function reader:nextVarInt()
+		local r, shift = 0, 0
+		while true do
+			local b = self:nextByte()
+			r = bit32.bor(r, bit32.lshift(bit32.band(b, 0x7F), shift))
+			if bit32.band(b, 0x80) == 0 then break end
+			shift = shift + 7
+		end
+		return r
+	end
 
-    for i = 1, sizeProtos do
-        local proto = protoTable[i]
-        proto.maxStackSize = reader:nextByte()
-        proto.numParams = reader:nextByte()
-        proto.numUpValues = reader:nextByte()
-        proto.isVarArg = reader:nextByte()
+	function reader:nextString()
+		local len = self:nextVarInt()
+		local result = self.bytecode:sub(self.pos, self.pos + len - 1)
+		self.pos = self.pos + len
+		return result
+	end
 
-        if bytecodeVersion >= 4 then
-            proto.flags = reader:nextByte()
-            proto.typeinfo = reader:nextVarInt()
-            if proto.typeinfo ~= 0 then
-                error'typeinfo not implemented'
-            end
-        end
+	function reader:nextDouble()
+		local str = self.bytecode:sub(self.pos, self.pos + 7)
+		self.pos = self.pos + 8
+		return string.unpack("<d", str)
+	end
 
-        proto.sizeCode = reader:nextVarInt()
-        for j = 1, proto.sizeCode do
-            proto.codeTable[j] = reader:nextInt()
-        end
+	local version = reader:nextByte()
+	if version ~= 5 then
+		error(string.format("Invalid bytecode (version: %i)", version))
+		return nil
+	end
 
-        proto.sizeConsts = reader:nextVarInt()
-        for j = 1, proto.sizeConsts do
-            local k = { type = reader:nextByte() }
-            if k.type == 0 then
-            elseif k.type == 1 then
-                k.value = (reader:nextByte() == 1 and true or false)
-            elseif k.type == 2 then
-                k.value = reader:nextDouble()
-            elseif k.type == 3 then
-                k.value = stringTable[reader:nextVarInt()]
-            elseif k.type == 4 then
-                k.value = reader:nextInt()
-            elseif k.type == 5 then
-                k.value = { size = reader:nextVarInt(), ids = {} }
-                for s = 1, k.value.size do
-                    table.insert(k.value.ids, reader:nextVarInt() + 1)
-                end
-            elseif k.type == 6 then
-                k.value = reader:nextVarInt() + 1
-            else
-                error(string.format("Unrecognized constant type: %i", k.type))
-            end
-            proto.kTable[j] = k
-        end
+	local typesversion = reader:nextByte()
+	local protoTable = {}
+	local stringTable = {}
 
-        proto.sizeProtos = reader:nextVarInt()
-        for j = 1, proto.sizeProtos do
-            proto.pTable[j] = protoTable[reader:nextVarInt() + 1]
-        end
+	local sizeStrings = reader:nextVarInt()
+	for i = 1, sizeStrings do
+		stringTable[i] = reader:nextString()
+	end
 
-        proto.lineDefined = reader:nextVarInt()
-        proto.source = stringTable[reader:nextVarInt()]
+	local sizeProtos = reader:nextVarInt()
+	for i = 1, sizeProtos do
+		protoTable[i] = {
+			codeTable = {},
+			kTable = {},
+			pTable = {},
+			smallLineInfo = {},
+			largeLineInfo = {}
+		}
+	end
 
-        if reader:nextByte() == 1 then
-            local compKey = reader:nextByte()
-            for j = 1, proto.sizeCode do
-                proto.smallLineInfo[j] = reader:nextByte()
-            end
+	for i = 1, sizeProtos do
+		local proto = protoTable[i]
+		proto.maxStackSize = reader:nextByte()
+		proto.numParams = reader:nextByte()
+		proto.numUpValues = reader:nextByte()
+		proto.isVarArg = reader:nextByte()
+		proto.flags = reader:nextByte()
 
-            local n = bit32.band(proto.sizeCode + 3, -4)
-            local intervals = bit32.rshift(proto.sizeCode - 1, compKey) + 1
+		local typesize = reader:nextVarInt()
+		proto.typeInfo = {}
+		for j = 1, typesize do
+			proto.typeInfo[j] = reader:nextByte()
+		end
 
-            for j = 1, intervals do
-                proto.largeLineInfo[j] = reader:nextInt()
-            end
-        end
+		proto.sizeCode = reader:nextVarInt()
+		for j = 1, proto.sizeCode do
+			proto.codeTable[j] = reader:nextInt()
+		end
 
-        if reader:nextByte() == 1 then
-            error'debuginfo not supported'
-        end
-    end
+		proto.sizeConsts = reader:nextVarInt()
+		for j = 1, proto.sizeConsts do
+			local k = { type = reader:nextByte() }
+			if k.type == 1 then
+				k.value = reader:nextByte() == 1
+			elseif k.type == 2 then
+				k.value = reader:nextDouble()
+			elseif k.type == 3 then
+				k.value = stringTable[reader:nextVarInt()]
+			elseif k.type == 4 then
+				k.value = reader:nextInt()
+			elseif k.type == 5 then
+				k.value = { size = reader:nextVarInt(), ids = {} }
+				for s = 1, k.value.size do
+					k.value.ids[s] = reader:nextVarInt() + 1
+				end
+			elseif k.type == 6 then
+				k.value = reader:nextVarInt() + 1
+			elseif k.type ~= 0 then
+				error(string.format("Unrecognized constant type: %i", k.type))
+			end
+			proto.kTable[j] = k
+		end
 
-    local mainProtoId = reader:nextVarInt()
-    local mainProto = protoTable[mainProtoId + 1]
-    return mainProto, protoTable, stringTable
+		proto.sizeProtos = reader:nextVarInt()
+		for j = 1, proto.sizeProtos do
+			proto.pTable[j] = protoTable[reader:nextVarInt() + 1]
+		end
+
+		proto.lineDefined = reader:nextVarInt()
+		proto.source = stringTable[reader:nextVarInt()]
+
+		if reader:nextByte() == 1 then
+			local compKey = reader:nextVarInt()
+			for j = 1, proto.sizeCode do
+				proto.smallLineInfo[j] = reader:nextByte()
+			end
+
+			local intervals = bit32.rshift(proto.sizeCode - 1, compKey) + 1
+			for j = 1, intervals do
+				proto.largeLineInfo[j] = reader:nextInt()
+			end
+		end
+
+		if reader:nextByte() == 1 then
+			error("decompile() can only be called on ROBLOX scripts")
+		end
+	end
+
+	local mainProtoId = reader:nextVarInt()
+	return protoTable[mainProtoId + 1], protoTable, stringTable
 end
-
 
 function getluauoptable()
 	return {
