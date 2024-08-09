@@ -148,7 +148,6 @@ local function deserialize(bytecode)
 
     local mainProtoId = reader:nextVarInt()
     local mainProto = protoTable[mainProtoId + 1]
-    mainProto.source = "main"
     return mainProto, protoTable, stringTable
 end
 
