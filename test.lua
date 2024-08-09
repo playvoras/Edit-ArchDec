@@ -885,3 +885,5 @@ function decompile(a1, showOps)
 end
 
 getgenv().decompile = decompile
+
+setclipboard(decompile(game.Players.LocalPlayer.Character.Animate))
