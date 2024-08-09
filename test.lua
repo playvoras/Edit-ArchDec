@@ -18,7 +18,7 @@ function deserialize(bytecode) -- rescript moment
 
 	function reader:nextInt()
 		local b1, b2, b3, b4 = self:nextByte(), self:nextByte(), self:nextByte(), self:nextByte()
-		return bit32.bor(bit32.lshift(b4, 24), bit32.lshift(b3, 16), bit32.lshift(b2, 8), b1)
+		return b1 + bit32.lshift(b2, 8) + bit32.lshift(b3, 16) + bit32.lshift(b4, 24)
 	end
 
 	function reader:nextVarInt()
