@@ -1811,7 +1811,7 @@ function ArchDecompile(bytecode)
 		if op == "LOADNIL" then
 			f("local v" .. a .. " = nil")
 		elseif op == "NOP" then
-			f("-- nop")
+			
 		elseif op == "BREAK" then
 			f("break")
 		elseif op == "LOADB" then
@@ -1827,7 +1827,7 @@ function ArchDecompile(bytecode)
 		elseif op == "GETUPVAL" then
 			f("local v" .. a .. " = v_u_" .. b)
 		elseif op == "CLOSEUPVALS" then
-			f("--closeupvals")
+			
 		elseif op == "GETIMPORT" then
 			f("local v" .. a .. " = " .. constants[d])
 		elseif op == "CALL" then
@@ -1849,15 +1849,15 @@ function ArchDecompile(bytecode)
 		elseif op == "SETTABLEN" then
 			f("v" .. b.. "[" .. c .. "] = v" .. a)
 		elseif op == "NEWCLOSURE" then
-			f("--newclosure")
+			
 		elseif op == "NAMECALL" then
 			f("v" .. b .. ":" .. K .. "()")
 		elseif op == "RETURN" then
 			f("return v" .. a)
 		elseif op == "JUMP" then
-			f("--jump")
+			
 		elseif op == "JUMPBACK" then
-			f("--jumpback")
+			
 		elseif op == "ADD" then
 			f("local v" .. a .. " = " .. "v" .. b  .. " + " .. "v" .. c)
 		elseif op == "SUB" then
@@ -1867,22 +1867,84 @@ function ArchDecompile(bytecode)
 		elseif op == "DIV" then
 			f("local v" .. a .. " = " .. "v" .. b  .. " / " .. "v" .. c)
 		elseif op == "FASTCALL" then
-                        f("--fastcall")
+                        
                 elseif op == "FASTCALL1" then
-                        f("--fastcall1")
+                        
                 elseif op == "FASTCALL2" then
-                        f("--fastcall2")
+                        
                 elseif op == "FASTCALL2K" then
-                        f("--fastcall2k")
+                        
 		elseif op == "LOADKX" then
                         f("local v" .. a .. " = " .. const(constants[aux]))
 	        elseif op == "COVERAGE" then
-                        f("-- coverage")
+                        
 	        elseif op == "DUPCLOSURE" then
-                        f("-- dupclosure not impl")
+                        
 		end
 	end
 	return table.concat(code, "\n")
 end
-
 getgenv().ArchDecompile = ArchDecompile
+local function decompile(path)
+    local output = ArchDecompile(path)
+    
+    if not output then
+        return '--[[ invalid script instance ]]--'
+    end
+
+    output = output:gsub('l__', '')
+    output = output:gsub(';', '; \n')
+    output = output:gsub('\n\nlocal', '\nlocal')
+    output = output:gsub('\nend', 'end')
+    output = output:gsub('\n\n\tend ', '\n\tend ')
+    output = output:gsub('\n\n', '\n')
+
+    local variable_msg = '-- [[ variables ]] --\n'
+    local constant_msg = '-- [[ constants ]] --\n'
+    local defined_constants = {}
+    local defined_variables = {}
+
+    for i = 1, 100 do
+        output = output:gsub('__' .. i, '')
+        output = output:gsub('u' .. i, 'c_' .. i)
+        output = output:gsub('p' .. i, 'parameter_' .. i)
+        output = output:gsub('v' .. i, 'v_' .. i)
+
+        if output:find('v_' .. i) and not (output:find('local v_' .. i)) then
+            output = output:gsub('local v_' .. i, 'v_' .. i)
+            table.insert(defined_variables, 'v_' .. i .. ' = nil')
+        end
+
+        if output:find('c_' .. i) and not (output:find('local c_' .. i)) then
+            output = output:gsub('local c_' .. i, 'c_' .. i)
+            table.insert(defined_constants, 'c_' .. i .. ' = nil')
+        end
+    end
+
+    local function adddefinitions(section_msg, definitions, marker)
+        local split = output:split(marker)
+        if not split[2] then
+            return output
+        end
+
+        for _, definition in pairs(definitions) do
+            section_msg = section_msg .. '\n' .. definition
+        end
+        return '-- decompiled with the decompiler.\n\n' .. section_msg .. split[2]
+    end
+
+    if #defined_variables > 0 then
+        variable_msg = adddefinitions(variable_msg, defined_variables, '-- decompiled with the decompiler.')
+    end
+
+    if #defined_constants > 0 then
+        constant_msg = adddefinitions(constant_msg, defined_constants, '-- decompiled with the decompiler.')
+    end
+
+    if output:find('bytecode') then
+        output = '--no bytecode was found (most likely a generated script or script that is empty).'
+    end
+
+    return output
+end
+getgenv().decompile = decompile
